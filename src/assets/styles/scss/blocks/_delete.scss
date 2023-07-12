@@ -1,0 +1,43 @@
+.delete {
+  width: 100%;
+  padding: 50px 100px;
+  background-color: $white;
+  border-radius: 10px;
+
+  .delete__title {
+    text-align: center;
+    color: $dark;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+
+  .delete__cover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .delete__btn {
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 18px;
+    padding: 6px 20px;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-color: rgb(198, 74, 74);
+  }
+
+  .delete__btn--ok {
+    background-color: $blue;
+  }
+}

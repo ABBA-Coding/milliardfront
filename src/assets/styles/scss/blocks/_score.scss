@@ -1,0 +1,727 @@
+.score {
+  padding: 47px 0 120px 0;
+
+  .mainscore {
+    .mainscore__info {
+      padding: 30px 28px 38px 34px;
+      background-color: $white;
+      border-radius: 10px;
+      margin-bottom: 58px;
+    }
+
+    .info__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .info__left {
+      display: flex;
+      align-items: center;
+    }
+
+    .info__cover {
+      padding: 14px 5px;
+      margin-right: 9px;
+      border-radius: 10px;
+      border: 2px solid $blue;
+      background: $white;
+    }
+
+    .info__img {
+      width: 62px;
+      height: 42px;
+    }
+
+    .info__title {
+      color: $dark;
+      font-size: 24px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .info__select {
+      border: none;
+      color: $dark;
+      font-size: 16px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      background-color: transparent;
+    }
+
+    .info__count {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      background: $yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $dark;
+      text-align: center;
+      font-size: 12px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-right: 27px;
+    }
+  }
+
+  .info__down {
+    .down__item {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .item__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 13px 24px;
+      border-radius: 10px;
+      border: 1px solid $blue;
+      background: $white;
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+      transition: all ease 0.3s;
+      &:hover {
+        transition: all ease 0.3s;
+        border: 1px solid $yellow;
+        background: $yellow;
+        .item__count {
+          color: $dark;
+          background-color: $white;
+          transition: all ease 0.3s;
+        }
+      }
+    }
+
+    .item__title {
+      color: $dark;
+      font-size: 15px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+
+    .item__lorem {
+      color: $dark;
+      font-size: 13px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .item__count {
+      width: 40px;
+      height: 40px;
+      color: $white;
+      text-align: center;
+      font-size: 12px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      border-radius: 40px;
+      background: $blue;
+      padding: 12px 8px;
+      transition: all ease 0.3s;
+    }
+  }
+
+  .minicard {
+    .minicard__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 58px;
+
+      .top__left {
+        width: 100%;
+        max-width: 384px;
+        padding: 22px 32px 26px 32px;
+        border-radius: 10px;
+        background-color: $white;
+      }
+
+      .left__title {
+        color: $dark;
+        font-size: 16px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 17px;
+      }
+
+      .left__list {
+        @include display-justfiy-alain;
+      }
+
+      .left__item {
+        color: $dark;
+        font-size: 16px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left__btn {
+        width: 46px;
+        height: 45px;
+        border: none;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        margin-top: 2px;
+        cursor: pointer;
+      }
+
+      .left__btn--laugh {
+        background-image: url(../../images/icons/laughing.png);
+      }
+
+      .left__btn--wow {
+        background-image: url(../../images/icons/bek.png);
+      }
+
+      .left__btn--sad {
+        background-image: url(../../images/icons/sad.png);
+      }
+
+      .left__btn--angry {
+        background-image: url(../../images/icons/angry.png);
+      }
+
+      .top__middle {
+        width: 100%;
+        max-width: 422px;
+        padding: 30px 38px 37px 38px;
+        border-radius: 10px;
+        background-color: $yellow;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .middle__member {
+        display: block;
+        color: $dark;
+        font-size: 16px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 3px;
+      }
+
+      .middle__member--second {
+        margin-bottom: 0;
+      }
+
+      .middle__count {
+        display: block;
+        color: $blue;
+        font-size: 24px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 6px;
+      }
+
+      .middle__absence {
+        display: inline-block;
+        color: $dark;
+        font-size: 16px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 37px;
+      }
+
+      .middle__icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .middle__cover {
+        width: 31px;
+        height: 31px;
+        color: $black;
+        font-size: 12px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-radius: 31px;
+        border: 1px solid $blue;
+        background: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 13px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .middle__img {
+        width: 31px;
+        height: 31px;
+      }
+
+      // top right
+
+      .top__right {
+        width: 100%;
+        max-width: 395px;
+        padding: 16px 12px 15px 27px;
+        border-radius: 10px;
+        background: $yellow;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .right__info {
+        width: 100%;
+        max-width: 139px;
+      }
+
+      .right__title {
+        color: $dark;
+        font-size: 16px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 8px;
+      }
+
+      .right__text {
+        display: inline-block;
+        color: $dark;
+        font-size: 14px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+
+      .right__text--down {
+        margin-bottom: 14px;
+      }
+
+      .right__light {
+        width: 100%;
+        display: block;
+        height: 27px;
+        border-radius: 10px;
+        background: $white;
+      }
+    }
+
+    .minicard__down {
+      .down__inner {
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+        position: relative;
+      }
+
+      .down__card {
+        width: 100%;
+        max-width: 384px;
+        padding: 14px 21px 11px 33px;
+        border-radius: 10px;
+        background: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 28px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .down__card--prev {
+        position: relative;
+        &::before {
+          content: "";
+          width: 39px;
+          height: 39px;
+          background-image: url(../../images/icons/prev_btn.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 22px;
+          left: -40px;
+        }
+      }
+
+      .down__card--next {
+        position: relative;
+        &::before {
+          content: "";
+          width: 39px;
+          height: 39px;
+          background-image: url(../../images/icons/next_btn.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 22px;
+          right: -40px;
+        }
+      }
+
+      .card__titie {
+        display: block;
+        color: $dark;
+        font-size: 16px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 2px;
+      }
+
+      .card__status {
+        display: block;
+        color: #00a91b;
+        font-size: 12px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 2px;
+      }
+
+      .card__status--filed {
+        color: #e80303;
+      }
+
+      .card__text {
+        display: block;
+        color: $dark;
+        font-size: 12px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .card__cound {
+        width: 46px;
+        height: 46px;
+        color: $dark;
+        font-size: 12px;
+        padding: 15px 10px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-radius: 46px;
+        background-color: $yellow;
+      }
+
+      .down__btn {
+        border: none;
+        padding: 0;
+        position: absolute;
+        background-color: transparent;
+        top: 20px;
+        right: 0px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .social {
+    .social__inner {
+      display: flex;
+      border-radius: 10px;
+      background-color: $white;
+      margin-bottom: 58px;
+
+      .inner__left {
+        width: 100%;
+        padding: 30px 44px 38px 34px;
+        .info__top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
+
+        .info__left {
+          display: flex;
+          align-items: center;
+        }
+
+        .info__cover {
+          padding: 14px 5px;
+          margin-right: 9px;
+          border-radius: 10px;
+          border: 2px solid $blue;
+          background: $white;
+        }
+
+        .info__img {
+          width: 62px;
+          height: 42px;
+        }
+
+        .info__title {
+          color: $dark;
+          font-size: 24px;
+          font-family: Manrope;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .info__select {
+          border: none;
+          color: $dark;
+          font-size: 16px;
+          font-family: Manrope;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          background-color: transparent;
+        }
+
+        .info__count {
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+          background: $yellow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $dark;
+          text-align: center;
+          font-size: 12px;
+          font-family: Manrope;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-right: 27px;
+        }
+      }
+
+      .inner__right {
+        padding: 39px 30px 38px 44px;
+        width: 100%;
+        max-width: 450px;
+        border-left: 1px solid #cccccc;
+
+        .right__title {
+          color: $dark;
+          font-size: 24px;
+          font-family: Manrope;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 15px;
+        }
+
+        .right__time {
+          color: $dark;
+          font-size: 13px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          padding: 10px 23px 11px 23px;
+          border-radius: 10px;
+          border: 1px solid #ccc;
+          background-color: $white;
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          svg {
+            margin-right: 10px;
+          }
+        }
+
+        .right__list {
+          display: flex;
+          align-items: center;
+          margin-bottom: 24px;
+        }
+
+        .righ__item {
+          width: 47px;
+          height: 47px;
+          color: $white;
+          font-size: 15px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin-right: 7px;
+          border-radius: 47px;
+          border: 1px solid $blue;
+          background-color: $blue;
+
+          &:last-child {
+            padding: 14px 10px;
+            margin-right: 0;
+          }
+        }
+
+        .right__text {
+          width: 100%;
+          max-width: 310px;
+          color: $dark;
+          font-size: 14px;
+          font-family: Manrope;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+          margin-bottom: 20px;
+        }
+
+        .right__file {
+          margin-bottom: 32px;
+        }
+
+        .file__title {
+          display: inline-block;
+          color: $dark;
+          font-size: 15px;
+          font-family: Manrope;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 16px;
+        }
+
+        .file__img {
+          width: 57px;
+          height: 57px;
+          margin-right: 10px;
+        }
+
+        .file__img--last {
+          margin-right: 0;
+        }
+
+        .right__service {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+
+        .service__downland {
+          color: $white;
+          font-size: 16px;
+          font-family: Manrope;
+          font-style: normal;
+          font-weight: 500;
+          padding: 14px 32px;
+          line-height: normal;
+          border-radius: 10px;
+          border: 1px solid $blue;
+          background-color: $blue;
+          transition: all ease 0.3s;
+          cursor: pointer;
+        }
+
+        .service__downland--view {
+          color: $black;
+          background-color: $white;
+          &:hover {
+            transition: all ease 0.3s;
+            border: 1px solid $yellow;
+            background-color: $yellow;
+          }
+        }
+      }
+    }
+  }
+
+  .lastscore {
+    .lastscore__info {
+      width: 100%;
+      border-radius: 10px;
+      background: $white;
+    }
+
+    .info__top {
+      padding: 20px 45px 21px 50px;
+      background-color: $blue;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    .info__title {
+      color: $white;
+      font-size: 24px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .info__coun {
+      color: $white;
+      font-size: 24px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .info__list {
+      padding: 22px 56px 30px 50px;
+    }
+
+    .list__item {
+      color: $dark;
+      font-size: 20px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      @include display-justfiy-alain;
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .list__count {
+        color: $dark;
+        text-align: right;
+        font-size: 20px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+}

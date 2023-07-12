@@ -1,0 +1,133 @@
+.header {
+  padding: 17px 0;
+  background-color: $white;
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__img {
+    width: 56px;
+    height: 52px;
+  }
+
+  .heaer__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__nav {
+    margin-right: 200px;
+    display: flex;
+    align-items: center;
+    .nav__list {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav__item {
+      margin-right: 60px;
+    }
+
+    .nav__link {
+      color: $dark;
+      text-align: center;
+      font-size: 16px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding-bottom: 28px;
+      transition: all ease 0.3s;
+    }
+
+    .active {
+      color: $dark;
+      text-align: center;
+      font-size: 16px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding-bottom: 28px;
+      border-bottom: 6px solid $yellow;
+      transition: all ease 0.3s;
+    }
+
+    .nav__select {
+      border: none;
+      background-color: transparent;
+      color: $black;
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    .nav__option {
+      color: $dark;
+    }
+  }
+
+  .header__avatar {
+    display: flex;
+    align-items: center;
+    padding-left: 58px;
+    border-left: 1px solid #cccccc;
+
+    .avatar__btn {
+      border: none;
+      padding: 0;
+      background-color: transparent;
+      margin-right: 68px;
+      cursor: pointer;
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .avatar__img {
+      width: 45px;
+      height: 45px;
+      border-radius: 100px;
+    }
+  }
+
+  // .header__sign {
+  //   display: flex;
+  //   align-items: center;
+
+  //   .sign__register {
+  //     color: $dark;
+  //     font-size: 16px;
+  //     font-family: Manrope;
+  //     font-style: normal;
+  //     font-weight: 700;
+  //     line-height: normal;
+  //     margin-right: 16px;
+  //   }
+
+  //   .sign__login {
+  //     color: $white;
+  //     text-align: center;
+  //     padding: 8px 25px;
+  //     font-size: 16px;
+  //     font-family: Manrope;
+  //     font-style: normal;
+  //     font-weight: 700;
+  //     line-height: normal;
+  //     border-radius: 8px;
+  //     background-color: $blue;
+  //   }
+  // }
+}
+
+.acatar__content {
+  width: 100%;
+  color: $white;
+  background-color: $blue;
+}

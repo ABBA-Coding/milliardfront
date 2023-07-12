@@ -1,0 +1,26 @@
+{
+  "header": {
+    "nav": {
+      "main": "Main",
+      "score": "Score",
+      "table": "Time Table",
+      "contact": "Contact",
+      "registr": "Registration",
+      "sign": "Sign in",
+      "journal": "Journal",
+      "tablet": "Table",
+      "reyting": "Reyting"
+    }
+  },
+  "product": {
+    "top": "Our top products",
+    "question": "Do you have any questions?",
+    "sent": "Sending",
+    "radiator": "Radiators",
+    "see": "See all",
+    "radiators": "Types of radiators",
+    "learn": "Learn more",
+    "detail": "Detailed video",
+    "show": "Our showroom"
+  }
+}

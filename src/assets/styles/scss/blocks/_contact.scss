@@ -1,0 +1,12 @@
+.contact {
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contact__inner {
+    height: 678px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header": {
+    "nav": {
+      "main": "Asosiy",
+      "score": "Xisob",
+      "table": "Vaqt jadvali",
+      "contact": "Aloqa",
+      "registr": "Ro'yxatdan o'tish",
+      "sign": "Kirish",
+      "journal": "Jurnal",
+      "tablet": "Tablitsa",
+      "reyting": "Reyting"
+    }
+  },
+  "product": {
+    "top": "Bizning top tovarlarimiz",
+    "question": "Savollaringiz bormi?",
+    "sent": "Yuborish",
+    "radiator": "Radiatorlar",
+    "see": "Barchasini ko’rish",
+    "radiators": "Radiatorlarning turlari",
+    "learn": "Batafsil bilish",
+    "detail": "Batafsil video",
+    "show": "Bizning show room"
+  }
+}
