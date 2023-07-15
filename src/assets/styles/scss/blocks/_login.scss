@@ -139,3 +139,45 @@
     cursor: pointer;
   }
 }
+
+.agent {
+  z-index: 11;
+  .login__input--select {
+    margin-bottom: 20px;
+  }
+  table {
+    border-collapse: collapse;
+
+    thead tr {
+      th {
+        width: 100px !important;
+        padding: 7px 0;
+        color: $black;
+        border: 1px solid #b4b4b4;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+
+    tbody tr td {
+      width: 56px;
+      border: 1px solid #b4b4b4;
+      input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        text-align: center;
+        color: $black;
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+}

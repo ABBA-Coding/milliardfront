@@ -64,18 +64,26 @@ export const Table = () => {
           >
             <option value={""}>All Students</option>
             {room?.classes?.map((item) => (
-              <option value={item.id}>{item.name} sinfi</option>
+              <option key={item.id} value={item.id}>
+                {item.name} sinfi
+              </option>
             ))}
           </select>
 
           <ul className="info__list">
             {StudentVal?.map((e) => (
-              <ItemList img={Std3} name={e.fullname} classroom={e.name} />
+              <ItemList
+                key={e.id}
+                img={Std3}
+                name={e.fullname}
+                classroom={e.name}
+                id={e.id}
+              />
             ))}
           </ul>
 
           <p className="info__text">
-            Umumiy o’quvchilar soni {StudentVal?.length}ta
+            Umumiy o’quvchilar soni {StudentVal?.length} ta
           </p>
         </div>
       </div>

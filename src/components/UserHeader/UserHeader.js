@@ -52,34 +52,36 @@ export const UserHeader = () => {
                   </NavLink>
                 </li>
                 <li className="nav__item">
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive ? "active" : "nav__link"
-                    }
-                    to="/contact"
-                  >
-                    {t("header.nav.contact")}
-                  </NavLink>
+                  <Tippy animation="fade" content="Call us now">
+                    <a
+                      className="nav__link nav__link--pad"
+                      href="tel:+998997652220"
+                    >
+                      {t("header.nav.contact")}
+                    </a>
+                  </Tippy>
                 </li>
               </ul>
-              <select
-                className="nav__select"
-                defaultValue={i18n.language}
-                onChange={(evt) => {
-                  i18n.changeLanguage(evt.target.value);
-                  localStorage.setItem("lang", evt.target.value);
-                }}
-              >
-                <option className="nav__option" value="en">
-                  English
-                </option>
-                <option className="nav__option" value="uz">
-                  Uzbek
-                </option>
-                <option className="nav__option" value="ru">
-                  Russian
-                </option>
-              </select>
+              <Tippy animation="fade" content="languages">
+                <select
+                  className="nav__select"
+                  defaultValue={i18n.language}
+                  onChange={(evt) => {
+                    i18n.changeLanguage(evt.target.value);
+                    localStorage.setItem("lang", evt.target.value);
+                  }}
+                >
+                  <option className="nav__option" value="en">
+                    English
+                  </option>
+                  <option className="nav__option" value="uz">
+                    Uzbek
+                  </option>
+                  <option className="nav__option" value="ru">
+                    Russian
+                  </option>
+                </select>
+              </Tippy>
             </nav>
 
             <div className="header__avatar avatar">

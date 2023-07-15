@@ -21,13 +21,14 @@ export const Footer = () => {
                 <img className="left__img" src={logo} alt="site logo" />
               </Link>
               <p className="left__text">
-                Phosf luorescently engage worldwide method process shopping.
+                Milliard Kidz - bolalar va o'smirlar uchun birinchi innovatsion
+                biznes maktab
               </p>
               <ul className="left__list">
                 <li className="left__item">
                   <a
                     className="left__icon"
-                    href="https://ru-ru.facebook.com/"
+                    href="https://www.facebook.com/Milliardkidz"
                     target="blank"
                   >
                     <FacebookIcon />
@@ -36,7 +37,7 @@ export const Footer = () => {
                 <li className="left__item">
                   <a
                     className="left__icon"
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/milliardkidz/?igshid=YzcxN2Q2NzY0OA%3D%3D"
                     target="blank"
                   >
                     <InstagramIcon />
@@ -45,7 +46,7 @@ export const Footer = () => {
                 <li className="left__item">
                   <a
                     className="left__icon"
-                    href="https://www.google.com/intl/ru/gmail/about/"
+                    href="https://t.me/milliardkidz"
                     target="blank"
                   >
                     <MessageIcon />
@@ -71,7 +72,7 @@ export const Footer = () => {
               </div>
 
               <div className="right__cover">
-                <strong className="right__title">Information</strong>
+                <strong className="right__title">Contact</strong>
                 <ul className="right__list">
                   <li className="right__item">
                     <a className="right__link" href="#/">
@@ -96,7 +97,7 @@ export const Footer = () => {
                 </ul>
               </div>
 
-              <div className="right__cover">
+              {/* <div className="right__cover">
                 <strong className="right__title">Company</strong>
                 <ul className="right__list">
                   <li className="right__item">
@@ -120,7 +121,7 @@ export const Footer = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
 

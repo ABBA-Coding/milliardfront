@@ -483,6 +483,9 @@ ul {
   padding-bottom: 28px;
   transition: all ease 0.3s;
 }
+.header .header__nav .nav__link--pad {
+  padding-bottom: 0;
+}
 .header .header__nav .active {
   color: #3d3d3d;
   text-align: center;
@@ -909,7 +912,15 @@ ul {
   background-color: #f5f7fa;
 }
 .journal .points .points__date table tbody tr {
+  height: 22px;
   border: 1px solid #b4b4b4;
+  text-align: center;
+  color: #000;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 .journal .points .points__date table tbody tr input {
   width: 100%;
@@ -963,12 +974,8 @@ ul {
 }
 .journal .points .points__section table tbody tr td {
   width: 56px;
+  height: 22px;
   border: 1px solid #b4b4b4;
-}
-.journal .points .points__section table tbody tr td input {
-  width: 100%;
-  border: none;
-  background-color: transparent;
   text-align: center;
   color: #000;
   font-family: Manrope;
@@ -1136,6 +1143,44 @@ ul {
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.agent {
+  z-index: 11;
+}
+.agent .login__input--select {
+  margin-bottom: 20px;
+}
+.agent table {
+  border-collapse: collapse;
+}
+.agent table thead tr th {
+  width: 100px !important;
+  padding: 7px 0;
+  color: #000;
+  border: 1px solid #b4b4b4;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.agent table tbody tr td {
+  width: 56px;
+  border: 1px solid #b4b4b4;
+}
+.agent table tbody tr td input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  color: #000;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .admin {

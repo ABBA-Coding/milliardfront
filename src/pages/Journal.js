@@ -25,7 +25,7 @@ export const Journal = () => {
               className={({ isActive }) =>
                 isActive ? "active" : "journal__link"
               }
-              to="jurnal"
+              to="jurnal/:id"
             >
               {t("header.nav.journal")}
             </NavLink>
@@ -41,7 +41,7 @@ export const Journal = () => {
           <Routes>
             <Route index element={<Table />} />
             <Route path="/journal" element={<Table />} />
-            <Route path="jurnal" element={<Jurnal />} />
+            <Route path="jurnal/:id" element={<Jurnal />} />
             <Route path="reyting" element={<Reyting />} />
           </Routes>
         </div>

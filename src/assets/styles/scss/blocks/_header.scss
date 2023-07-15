@@ -43,6 +43,10 @@
       transition: all ease 0.3s;
     }
 
+    .nav__link--pad {
+      padding-bottom: 0;
+    }
+
     .active {
       color: $dark;
       text-align: center;

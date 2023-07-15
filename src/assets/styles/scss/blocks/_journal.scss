@@ -355,7 +355,15 @@
         tbody {
           background-color: #f5f7fa;
           tr {
+            height: 22px;
             border: 1px solid #b4b4b4;
+            text-align: center;
+            color: $black;
+            font-family: Manrope;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
 
             input {
               width: 100%;
@@ -419,19 +427,15 @@
 
         tbody tr td {
           width: 56px;
+          height: 22px;
           border: 1px solid #b4b4b4;
-          input {
-            width: 100%;
-            border: none;
-            background-color: transparent;
-            text-align: center;
-            color: $black;
-            font-family: Manrope;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
+          text-align: center;
+          color: $black;
+          font-family: Manrope;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
         }
       }
     }
@@ -458,3 +462,9 @@
     }
   }
 }
+
+// .login__form {
+//   .form-group {
+
+//   }
+// }
