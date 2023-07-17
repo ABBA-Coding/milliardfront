@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useState } from "react";
 import { ReytingItem } from "./ReytingItem";
 import { ScrollerBtn } from "./ScrollerBtn";
@@ -157,7 +157,7 @@ export const Reyting = () => {
       </div>
     </div>
   );
-=======
+
 import React, { useMemo, useState } from "react";
 import { ReytingItem } from "./ReytingItem";
 import { ScrollerBtn } from "./ScrollerBtn";
@@ -251,5 +251,4 @@ export const Reyting = () => {
 			</div>
 		</div>
 	);
->>>>>>> b4ac3c5bfb8ab230b4b5968bb6e248a97c42e263
 };

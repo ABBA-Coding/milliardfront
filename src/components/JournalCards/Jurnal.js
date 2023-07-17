@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 import React, { useState } from "react";
-=======
+
 import React, { useEffect, useMemo, useState } from "react";
->>>>>>> b4ac3c5bfb8ab230b4b5968bb6e248a97c42e263
+
 import { useParams } from "react-router-dom";
 import { GetElementServices } from "../../services/AxiosGenerator";
 import Modal from "react-modal";
@@ -10,15 +10,15 @@ import { RentModal } from "../RentModal/RentModal";
 Modal.setAppElement("#root");
 
 const Jurnal = () => {
-<<<<<<< HEAD
+
   const [addModal, setAddModal] = React.useState(false);
   const [student, SetStudent] = useState([]);
   const { id } = useParams();
-=======
+
 	const [addModal, setAddModal] = React.useState(false);
 	const [student, SetStudent] = useState([]);
 	const { id } = useParams();
->>>>>>> b4ac3c5bfb8ab230b4b5968bb6e248a97c42e263
+
 
 	const customStyles = {
 		content: {
@@ -38,7 +38,7 @@ const Jurnal = () => {
 		},
 	};
 
-<<<<<<< HEAD
+
   const Allstudents = () => {
     GetElementServices(`student?id=${id}`, SetStudent);
   };
@@ -75,7 +75,7 @@ const Jurnal = () => {
             </tbody>
           </table>
         </div>
-=======
+
 	useEffect(() => {
 		GetElementServices(`student?id=${id}`, SetStudent);
 	}, [id]);
@@ -110,7 +110,7 @@ const Jurnal = () => {
 						</thead>
 					</table>
 				</div>
->>>>>>> b4ac3c5bfb8ab230b4b5968bb6e248a97c42e263
+
 
 				<div className="points__section section">
 					<p className="section__title">Muloqot qilish</p>
