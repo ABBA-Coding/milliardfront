@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetElementServices } from "../../services/AxiosGenerator";
 import Modal from "react-modal";
@@ -9,7 +9,6 @@ const Jurnal = () => {
   const [addModal, setAddModal] = React.useState(false);
   const [student, SetStudent] = useState([]);
   const { id } = useParams();
-  console.log(student?.user ? student?.user : student);
 
   const customStyles = {
     content: {
@@ -29,16 +28,20 @@ const Jurnal = () => {
     },
   };
 
-  useEffect(() => {
+  const Allstudents = () => {
     GetElementServices(`student?id=${id}`, SetStudent);
-  }, [id]);
+  };
 
-  const date = new Date(student?.user?.scores?.[0]?.createdAt);
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1; // Months are zero-based, so we add 1
-  const day = date.getDate();
-  const allData = `${year} - ${month} - ${day}`;
-  console.log(allData);
+  if (id !== ":id") {
+    Allstudents();
+  }
+
+  // const date = new Date(student?.user?.scores?.[0]?.createdAt);
+  // const year = date.getFullYear();
+  // const month = date.getMonth() + 1; // Months are zero-based, so we add 1
+  // const day = date.getDate();
+  // const allData = `${year} - ${month} - ${day}`;
+  // console.log(allData);
 
   return (
     <div className="points">
@@ -51,9 +54,7 @@ const Jurnal = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>{allData}</td>
-              </tr>
+              <tr>{/* <td>{allData}</td> */}</tr>
               {/* {student?.user?.scores?.map((item) => (
                 <tr>{item.createdAt}</tr>
               ))} */}

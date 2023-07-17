@@ -798,13 +798,20 @@ ul {
   margin-left: 30px;
 }
 .journal .reyting .info__title {
+  width: 100%;
+  max-width: 230px;
+  padding: 3px 10px;
   color: #3d3d3d;
   font-family: Manrope;
-  font-size: 40px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 20px;
+  margin-bottom: 47px;
+  border: none;
+  border: 1px solid #dbdcdf;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .journal .reyting .info__list {
   width: 100%;
@@ -1623,6 +1630,7 @@ ul {
   background: #188ce5;
   padding: 12px 8px;
   transition: all ease 0.3s;
+  display: flex;
 }
 .score .minicard .minicard__top {
   display: flex;

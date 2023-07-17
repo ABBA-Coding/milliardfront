@@ -27,6 +27,9 @@ export const Login = () => {
           if (data.status === 200) {
             localStorage.setItem("token", data.data.token);
             localStorage.setItem("role", data.data.user.role);
+            if (data.data.user.role === "USER") {
+              localStorage.setItem("userId", data.data.user.id);
+            }
             navigate("/");
             window.location.reload(false);
           }
