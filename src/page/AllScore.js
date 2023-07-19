@@ -1,5 +1,4 @@
 import React from "react";
-import { GradesCard } from "../components/ScoreCards/GradesCard";
 import { Clock } from "../assets/images/img/img";
 import Man1 from "../assets/images/icons/man1.png";
 import Man2 from "../assets/images/icons/man2.png";
@@ -9,6 +8,7 @@ import Man5 from "../assets/images/icons/man5.png";
 import Book1 from "../assets/images/icons/book1.png";
 import Book2 from "../assets/images/icons/book2.png";
 import { MiniCards } from "../components/ScoreCards/MiniCards";
+import { LastCard } from "../components/ScoreCards/LastCards";
 
 export const AllScore = () => {
   return (
@@ -16,7 +16,7 @@ export const AllScore = () => {
       <div className="container">
         <div className="social__inner inner">
           <div className="inner__left">
-            <GradesCard link={"lastscore"} />
+            <LastCard />
           </div>
           <div className="inner__right right">
             <h3 className="right__title">Biznesni davolash</h3>

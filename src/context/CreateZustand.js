@@ -1,8 +1,8 @@
 import create from "zustand";
 
 const useZustand = create((set) => ({
-  roles: localStorage.getItem("role"),
-  setRoles: (value) => set(() => ({ roles: value })),
+  time: "",
+  setTime: (value) => set(() => ({ time: value })),
 }));
 
 export default useZustand;

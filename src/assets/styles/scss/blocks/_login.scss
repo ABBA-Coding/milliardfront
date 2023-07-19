@@ -141,8 +141,13 @@
 }
 
 .agent {
+  padding: 20px;
   z-index: 11;
   .login__input--select {
+    margin-bottom: 20px;
+  }
+
+  .form-group {
     margin-bottom: 20px;
   }
   table {

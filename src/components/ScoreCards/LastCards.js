@@ -4,13 +4,12 @@ import Menber from "../../assets/images/icons/score-img.png";
 import { GetElementServices } from "../../services/AxiosGenerator";
 import useZustand from "../../context/CreateZustand";
 
-export const GradesCard = () => {
-  const [clock, setClock] = useState();
+export const LastCard = () => {
   const [students, setStudents] = useState();
   const UserId = localStorage.getItem("userId");
   const setTime = useZustand((state) => state?.setTime);
-
-  // console.log(students ? students : "");
+  const time = useZustand((state) => state?.time);
+  console.log(students ? students : "");
 
   useEffect(() => {
     GetElementServices(`student?id=${UserId}`, setStudents);
@@ -40,7 +39,6 @@ export const GradesCard = () => {
               className="info__select"
               defaultValue={""}
               onChange={(e) => {
-                setClock(e.target.value);
                 setTime(e.target.value);
               }}
             >
@@ -56,7 +54,7 @@ export const GradesCard = () => {
           </div>
         </div>
         {students?.user?.scores?.map((e) =>
-          e.createdAt === clock
+          e.createdAt === time
             ? e?.scores.forEach((number) => {
                 sum += number;
                 console.log(sum);
@@ -70,9 +68,12 @@ export const GradesCard = () => {
       <div className="info__down down">
         <ul className="down__list">
           {students?.user?.scores?.map((item) =>
-            item.skill === "COMMUNICATION" && item.createdAt === clock ? (
+            item.skill === "COMMUNICATION" && item.createdAt === time ? (
               <li className="down__item item">
-                <Link className="item__link" to={`allscore`}>
+                <Link
+                  className="item__link"
+                  to={`lastscore/${"COMMUNICATION"}`}
+                >
                   <div className="item__left">
                     <h5 className="item__title">Muloqot qilish</h5>
                     <span className="item__lorem">Lorem</span>
@@ -92,9 +93,9 @@ export const GradesCard = () => {
           )}
 
           {students?.user?.scores?.map((item) =>
-            item.skill === "CRITICAL_THINKING" && item.createdAt === clock ? (
+            item.skill === "CRITICAL_THINKING" && item.createdAt === time ? (
               <li className="down__item item">
-                <Link className="item__link" to={"allscore"}>
+                <Link className="item__link" to={"lastscore/CRITICAL_THINKING"}>
                   <div className="item__left">
                     <h5 className="item__title">Tanqidiy fikrlash</h5>
                     <span className="item__lorem">Lorem</span>
@@ -115,9 +116,9 @@ export const GradesCard = () => {
           )}
 
           {students?.user?.scores?.map((item) =>
-            item.skill === "PROBLEM_SOLVING" && item.createdAt === clock ? (
+            item.skill === "PROBLEM_SOLVING" && item.createdAt === time ? (
               <li className="down__item item">
-                <Link className="item__link" to={"allscore"}>
+                <Link className="item__link" to={"lastscore/PROBLEM_SOLVING"}>
                   <div className="item__left">
                     <h5 className="item__title">Muammolarni hal qilish</h5>
                     <span className="item__lorem">Lorem</span>
@@ -137,9 +138,9 @@ export const GradesCard = () => {
             )
           )}
           {students?.user?.scores?.map((item) =>
-            item.skill === "IMPLEMENTATION" && item.createdAt === clock ? (
+            item.skill === "IMPLEMENTATION" && item.createdAt === time ? (
               <li className="down__item item">
-                <Link className="item__link" to={"allscore"}>
+                <Link className="item__link" to={"lastscore/IMPLEMENTATION"}>
                   <div className="item__left">
                     <h5 className="item__title">Yechimlarni qo'llash</h5>
                     <span className="item__lorem">Lorem</span>
@@ -158,16 +159,6 @@ export const GradesCard = () => {
               ""
             )
           )}
-
-          {/* <li className="down__item item">
-            <Link className="item__link" to={link}>
-              <div className="item__left">
-                <h5 className="item__title">Muloqot qilish</h5>
-                <span className="item__lorem">Lorem</span>
-              </div>
-              <span className="item__count">20%</span>
-            </Link>
-          </li> */}
         </ul>
       </div>
     </>

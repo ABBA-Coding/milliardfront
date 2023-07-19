@@ -183,9 +183,10 @@
   .reyting {
     display: flex;
     align-items: flex-start;
-    padding: 26px 75px 32px 35px;
+    padding: 26px 75px 42px 35px;
     border-radius: 10px;
     background-color: $white;
+    position: relative;
 
     .reyting__links {
       width: 30px;
@@ -277,6 +278,9 @@
     }
 
     .info__down {
+      width: 86%;
+      position: absolute;
+      bottom: 15px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -361,7 +365,8 @@
 
         tbody {
           background-color: #f5f7fa;
-          tr {
+          tr td {
+            display: block;
             height: 22px;
             border: 1px solid #b4b4b4;
             text-align: center;
@@ -372,18 +377,18 @@
             font-weight: 500;
             line-height: normal;
 
-            input {
-              width: 100%;
-              border: none;
-              background-color: transparent;
-              text-align: center;
-              color: $black;
-              font-family: Manrope;
-              font-size: 10px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: normal;
-            }
+            // input {
+            //   width: 100%;
+            //   border: none;
+            //   background-color: transparent;
+            //   text-align: center;
+            //   color: $black;
+            //   font-family: Manrope;
+            //   font-size: 10px;
+            //   font-style: normal;
+            //   font-weight: 500;
+            //   line-height: normal;
+            // }
           }
         }
       }
@@ -470,8 +475,6 @@
   }
 }
 
-// .login__form {
-//   .form-group {
-
-//   }
-// }
+.agent {
+  display: none;
+}

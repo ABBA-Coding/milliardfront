@@ -665,6 +665,7 @@
 
   .lastscore {
     .lastscore__info {
+      position: relative;
       width: 100%;
       border-radius: 10px;
       background: $white;
@@ -722,6 +723,28 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+      }
+    }
+
+    .info__count {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 96px;
+      right: 55px;
+    }
+    .list__count {
+      display: inline-block;
+      color: $dark;
+      text-align: right;
+      font-size: 20px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

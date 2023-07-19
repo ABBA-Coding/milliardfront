@@ -763,9 +763,10 @@ ul {
 .journal .reyting {
   display: flex;
   align-items: flex-start;
-  padding: 26px 75px 32px 35px;
+  padding: 26px 75px 42px 35px;
   border-radius: 10px;
   background-color: #ffffff;
+  position: relative;
 }
 .journal .reyting .reyting__links {
   width: 30px;
@@ -846,6 +847,9 @@ ul {
   background-color: white;
 }
 .journal .reyting .info__down {
+  width: 86%;
+  position: absolute;
+  bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -918,25 +922,14 @@ ul {
 .journal .points .points__date table tbody {
   background-color: #f5f7fa;
 }
-.journal .points .points__date table tbody tr {
+.journal .points .points__date table tbody tr td {
+  display: block;
   height: 22px;
   border: 1px solid #b4b4b4;
   text-align: center;
   color: #000;
   font-family: Manrope;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.journal .points .points__date table tbody tr input {
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  text-align: center;
-  color: #000;
-  font-family: Manrope;
-  font-size: 10px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -1009,6 +1002,10 @@ ul {
   padding: 6px 12px;
   border: none;
   cursor: pointer;
+}
+
+.agent {
+  display: none;
 }
 
 .contact {
@@ -1153,9 +1150,13 @@ ul {
 }
 
 .agent {
+  padding: 20px;
   z-index: 11;
 }
 .agent .login__input--select {
+  margin-bottom: 20px;
+}
+.agent .form-group {
   margin-bottom: 20px;
 }
 .agent table {
@@ -2092,6 +2093,7 @@ ul {
   background-color: #ffe600;
 }
 .score .lastscore .lastscore__info {
+  position: relative;
   width: 100%;
   border-radius: 10px;
   background: #ffffff;
@@ -2146,6 +2148,27 @@ ul {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+.score .lastscore .info__count {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 96px;
+  right: 55px;
+}
+.score .lastscore .list__count {
+  display: inline-block;
+  color: #3d3d3d;
+  text-align: right;
+  font-size: 20px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+.score .lastscore .list__count:last-child {
+  margin-bottom: 0;
 }
 
 .table .table__inner {

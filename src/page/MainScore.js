@@ -9,7 +9,7 @@ export const MainScore = () => {
     <div className="mainscore">
       <div className="container">
         <div className="mainscore__info info">
-          <GradesCard link={"allscore"} />
+          <GradesCard />
         </div>
         <div className="mainscore__bottom">
           <MiniCards />

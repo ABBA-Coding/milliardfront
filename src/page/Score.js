@@ -10,7 +10,7 @@ export const Score = () => {
       <Routes>
         <Route index element={<MainScore />} />
         <Route path="allscore" element={<AllScore />} />
-        <Route path="allscore/lastscore" element={<LastScore />} />
+        <Route path="allscore/lastscore/:param" element={<LastScore />} />
       </Routes>
     </div>
   );

@@ -8,7 +8,7 @@ export const Table = () => {
   const [classId, setClassId] = useState("");
   const [room, setRoom] = useState();
   const [students, setStudents] = useState();
-  console.log(students);
+  // console.log(students);
 
   const StudentVal =
     students?.students || students?.users || students
