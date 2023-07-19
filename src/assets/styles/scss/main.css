@@ -1513,7 +1513,6 @@ ul {
   padding: 30px 28px 38px 34px;
   background-color: #ffffff;
   border-radius: 10px;
-  margin-bottom: 58px;
 }
 .score .mainscore .info__top {
   display: flex;
@@ -1914,7 +1913,6 @@ ul {
   display: flex;
   border-radius: 10px;
   background-color: #ffffff;
-  margin-bottom: 58px;
 }
 .score .social .social__inner .inner__left {
   width: 100%;
@@ -1977,6 +1975,7 @@ ul {
   margin-right: 27px;
 }
 .score .social .social__inner .inner__right {
+  position: relative;
   padding: 39px 30px 38px 44px;
   width: 100%;
   max-width: 450px;
@@ -2002,7 +2001,7 @@ ul {
   border-radius: 10px;
   border: 1px solid #ccc;
   background-color: #ffffff;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
 }
@@ -2041,7 +2040,7 @@ ul {
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 .score .social .social__inner .inner__right .right__file {
   margin-bottom: 32px;
@@ -2091,6 +2090,11 @@ ul {
   transition: all ease 0.3s;
   border: 1px solid #ffe600;
   background-color: #ffe600;
+}
+.score .social .social__inner .inner__right .right__btn {
+  position: absolute;
+  bottom: 20px;
+  right: 38%;
 }
 .score .lastscore .lastscore__info {
   position: relative;
@@ -2171,6 +2175,9 @@ ul {
   margin-bottom: 0;
 }
 
+.table {
+  padding: 20px 0 100px 0;
+}
 .table .table__inner {
   display: flex;
 }

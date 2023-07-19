@@ -62,7 +62,7 @@ export const Login = () => {
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                placeholder="entr your email"
+                placeholder="enter your email"
               />
               {formik.touched.email && formik.errors.email ? (
                 <span>{formik.errors.email}</span>
@@ -80,7 +80,7 @@ export const Login = () => {
                 value={formik.values.password}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                placeholder="entr your password"
+                placeholder="enter your password"
               />
               {formik.touched.password && formik.errors.password ? (
                 <span>{formik.errors.password}</span>

@@ -11,9 +11,7 @@ export const MainScore = () => {
         <div className="mainscore__info info">
           <GradesCard />
         </div>
-        <div className="mainscore__bottom">
-          <MiniCards />
-        </div>
+        <div className="mainscore__bottom">{/* <MiniCards /> */}</div>
       </div>
     </div>
   );

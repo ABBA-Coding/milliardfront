@@ -54,7 +54,7 @@ export const AditionModal = ({ role }) => {
           value={formik.values.username}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          placeholder="entr your username"
+          placeholder="enter your username"
         />
         {formik.touched.username && formik.errors.username ? (
           <span>{formik.errors.username}</span>
@@ -72,7 +72,7 @@ export const AditionModal = ({ role }) => {
           value={formik.values.fullname}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          placeholder="entr your fullname"
+          placeholder="enter your fullname"
         />
         {formik.touched.fullname && formik.errors.fullname ? (
           <span>{formik.errors.fullname}</span>
@@ -90,7 +90,7 @@ export const AditionModal = ({ role }) => {
           value={formik.values.email}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          placeholder="entr your email"
+          placeholder="enter your email"
         />
         {formik.touched.email && formik.errors.email ? (
           <span>{formik.errors.email}</span>
@@ -108,7 +108,7 @@ export const AditionModal = ({ role }) => {
           value={formik.values.password}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          placeholder="entr your password"
+          placeholder="enter your password"
         />
         {formik.touched.password && formik.errors.password ? (
           <span>{formik.errors.password}</span>

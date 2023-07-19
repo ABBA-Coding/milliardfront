@@ -61,7 +61,7 @@ export const LastScore = () => {
             {students?.user?.scores?.map((e) =>
               e.skill === param && e.createdAt === time
                 ? e?.scores?.map((item) => (
-                    <span className="list__count"> {Math.floor(item)}%</span>
+                    <span className="list__count"> {Math.floor(item)}</span>
                   ))
                 : ""
             )}

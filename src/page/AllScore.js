@@ -1,13 +1,5 @@
 import React from "react";
-import { Clock } from "../assets/images/img/img";
-import Man1 from "../assets/images/icons/man1.png";
-import Man2 from "../assets/images/icons/man2.png";
-import Man3 from "../assets/images/icons/man13.png";
-import Man4 from "../assets/images/icons/man4.png";
-import Man5 from "../assets/images/icons/man5.png";
-import Book1 from "../assets/images/icons/book1.png";
-import Book2 from "../assets/images/icons/book2.png";
-import { MiniCards } from "../components/ScoreCards/MiniCards";
+import { Clock, MessageDownbtn } from "../assets/images/img/img";
 import { LastCard } from "../components/ScoreCards/LastCards";
 
 export const AllScore = () => {
@@ -25,42 +17,11 @@ export const AllScore = () => {
               <Clock /> 10.30 AM - 11.30 AM
             </span>
 
-            <ul className="right__list">
-              <li className="righ__item">
-                <img src={Man1} alt="member" />
-              </li>
-              <li className="righ__item">
-                <img src={Man2} alt="member" />
-              </li>
-              <li className="righ__item">
-                <img src={Man3} alt="member" />
-              </li>
-              <li className="righ__item">
-                <img src={Man4} alt="member" />
-              </li>
-              <li className="righ__item">
-                <img src={Man5} alt="member" />
-              </li>
-              <li className="righ__item">+99</li>
-            </ul>
-
             <p className="right__text">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s,
             </p>
-
-            <div className="right__file file">
-              <strong className="file__title">Lesson Files</strong>
-              <div className="file__cover">
-                <img className="file__img" src={Book1} alt="book" />
-                <img
-                  className="file__img file__img--last"
-                  src={Book2}
-                  alt="book"
-                />
-              </div>
-            </div>
 
             <div className="right__service service">
               <button className="service__downland">Download</button>
@@ -68,9 +29,17 @@ export const AllScore = () => {
                 View
               </button>
             </div>
+
+            <a
+              href="https://t.me/milliardkidz"
+              target="blank"
+              className="right__btn"
+            >
+              <MessageDownbtn />
+            </a>
           </div>
         </div>
-        <MiniCards />
+        {/* <MiniCards /> */}
       </div>
     </div>
   );

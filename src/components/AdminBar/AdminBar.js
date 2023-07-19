@@ -30,24 +30,7 @@ export const AdminBar = () => {
           Classes
         </NavLink>
       </div>
-      <div className="adminbar__Links">
-        {/* <button
-          className={"adminbar__link adminbar__link--link"}
-          onClick={() => {
-            setRoles("TEACHER");
-          }}
-        >
-          For Teachers
-        </button> */}
-        {/* <button
-          className={"adminbar__link adminbar__link--link"}
-          onClick={() => {
-            setRoles("USER");
-          }}
-        >
-          For Users
-        </button> */}
-      </div>
+      <div className="adminbar__Links"></div>
       <button
         className={"adminbar__link adminbar__link--log"}
         onClick={() => {

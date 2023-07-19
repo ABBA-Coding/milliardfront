@@ -56,7 +56,7 @@ export const Footer = () => {
             </div>
             <div className="top__right right">
               <div className="right__cover">
-                <strong className="right__title">Shop</strong>
+                <strong className="right__title">Mainly</strong>
                 <ul className="right__list">
                   <li className="right__item">
                     <a className="right__link" href="#/">
@@ -75,8 +75,8 @@ export const Footer = () => {
                 <strong className="right__title">Contact</strong>
                 <ul className="right__list">
                   <li className="right__item">
-                    <a className="right__link" href="#/">
-                      Shipping Policy
+                    <a className="right__link" href="tel:+998952503220">
+                      +998952503220
                     </a>
                   </li>
                   <li className="right__item">
@@ -85,43 +85,16 @@ export const Footer = () => {
                     </a>
                   </li>
                   <li className="right__item">
-                    <a className="right__link" href="#/">
-                      Cookies Policy
-                    </a>
-                  </li>
-                  <li className="right__item">
-                    <a className="right__link" href="#/">
-                      Frequently asked
+                    <a
+                      className="right__link"
+                      href="https://linktr.ee/milliardkidz?utm_source=linktree_profile_share&ltsid=42cc7d68-7fdf-4d2b-8645-ef4e726c8c8a"
+                      target="blank"
+                    >
+                      Linktr
                     </a>
                   </li>
                 </ul>
               </div>
-
-              {/* <div className="right__cover">
-                <strong className="right__title">Company</strong>
-                <ul className="right__list">
-                  <li className="right__item">
-                    <a className="right__link" href="#/">
-                      About us
-                    </a>
-                  </li>
-                  <li className="right__item">
-                    <a className="right__link" href="#/">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li className="right__item">
-                    <a className="right__link" href="#/">
-                      Terms & Conditions
-                    </a>
-                  </li>
-                  <li className="right__item">
-                    <a className="right__link" href="#/">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
             </div>
           </div>
 
