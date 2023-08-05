@@ -1,31 +1,89 @@
 .global {
   .global__inner {
+    position: relative;
     height: 790px;
-    background-image: url(../../images/icons/teachers.png);
+    // background-image: url(../../images/icons/teachers.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    .global__title {
+      color: $dark;
+      font-family: Manrope;
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+      position: absolute;
+      top: 140px;
+      left: 15%;
+
+      @include media-max(800px) {
+        font-size: 48.613px;
+        left: 5%;
+      }
+
+      @include media-max(500px) {
+        font-size: 36px;
+        top: 20px;
+        left: 22%;
+      }
+    }
+
+    @include media-max(800px) {
+      height: 716px;
+      background-position: calc(50% - 220px);
+    }
+
+    @include media-max(500px) {
+      height: 716px;
+      background-position: calc(50% - 390px);
+    }
   }
 
   .global__down {
     padding: 32px 0 120px 0;
     background-color: $white;
+    @include media-max(800px) {
+      padding: 20px 0 70px 0;
+    }
+  }
+
+  .down__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .down__line {
     display: inline-block;
     width: 100%;
+    // max-width: 485px;
     height: 5px;
     background-color: #cccccc;
     position: relative;
+    // margin: 0 auto;
+
     &::before {
       content: "";
-      width: 485px;
+      width: 100%;
+      max-width: 485px;
       height: 5px;
       background-color: $yellow;
       position: absolute;
       left: 30%;
       top: 0;
+    }
+
+    @include media-max(800px) {
+      max-width: 200px;
+
+      &::before {
+        content: "";
+        max-width: 50px;
+        left: 40%;
+      }
     }
   }
 }
@@ -33,31 +91,90 @@
 .userglobal {
   .userglobal__inner {
     height: 790px;
-    background-image: url(../../images/icons/CaruselUser.png);
+    // background-image: url(../../images/icons/family.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+
+    .global__title {
+      color: $dark;
+      font-family: Manrope;
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+      position: absolute;
+      top: 330px;
+      left: 1%;
+
+      @include media-max(1050px) {
+        font-size: 48.613px;
+        // top: 430px;
+        left: 5%;
+      }
+
+      @include media-max(680px) {
+        font-size: 36px;
+        top: 20px;
+        left: 25%;
+      }
+    }
+
+    @include media-max(800px) {
+      height: 716px;
+      // background-position: calc(50% - 220px);
+    }
+
+    @include media-max(500px) {
+      // height: 716px;
+      background-position: calc(50% - 114px);
+    }
   }
 
   .userglobal__down {
     padding: 32px 0 120px 0;
     background-color: $white;
+    @include media-max(800px) {
+      padding: 20px 0 60px 0;
+    }
+  }
+
+  .down__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .down__line {
     display: inline-block;
     width: 100%;
+    // max-width: 485px;
     height: 5px;
     background-color: #cccccc;
     position: relative;
+    // margin: 0 auto;
+
     &::before {
       content: "";
-      width: 485px;
+      width: 100%;
+      max-width: 485px;
       height: 5px;
       background-color: $yellow;
       position: absolute;
       left: 30%;
       top: 0;
+    }
+
+    @include media-max(800px) {
+      max-width: 200px;
+
+      &::before {
+        content: "";
+        max-width: 50px;
+        left: 40%;
+      }
     }
   }
 }

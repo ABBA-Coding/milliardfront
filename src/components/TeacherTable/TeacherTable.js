@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
-import { DeleteIcon } from "../../assets/images/img/img";
+import { DeleteIcon, EditIcon } from "../../assets/images/img/img";
 import { AditionModal } from "../AdditionModal/AdditionModal";
 import {
   GetElementServices,
   SearchServices,
 } from "../../services/AxiosGenerator";
 import { DeleteModal } from "../DeleteModal/DeleteModal";
+import { EditModalComponent } from "../EditModal/EditModal";
 Modal.setAppElement("#root");
 
 export const TeacherTable = () => {
@@ -14,9 +15,13 @@ export const TeacherTable = () => {
   const [teachers, setTeachers] = useState(null);
   const [deleteModal, setDeleteModal] = React.useState(false);
   const [deleteId, setDeleteId] = useState("");
+  const [editId, setEditId] = useState("");
+  const [editModal, setEditModal] = React.useState(false);
 
   const StudentVal =
     teachers?.users || teachers ? teachers?.users || teachers : teachers?.users;
+
+  console.log(teachers);
 
   function openModal() {
     setIsOpen(true);
@@ -47,6 +52,10 @@ export const TeacherTable = () => {
   useEffect(() => {
     GetElementServices(`teachers`, setTeachers);
   }, []);
+
+  // useEffect(() => {
+  //   GetElementServices(`class/all`, setTeachers);
+  // }, []);
 
   // seach
   const HandleChearch = (evt) => {
@@ -91,11 +100,21 @@ export const TeacherTable = () => {
         <DeleteModal edId={deleteId} isOpen={setDeleteModal} />
       </Modal>
 
+      <Modal
+        isOpen={editModal}
+        onRequestClose={() => setEditModal(false)}
+        style={customStyles}
+      >
+        <EditModalComponent edId={editId} />
+      </Modal>
+
       <div className="studenttable__main">
         <div className="table__top top">
           <span className="top__text top__text--teacher">Email</span>
-          <span className="top__text">FullName</span>
+          <span className="top__text ">FullName</span>
           <span className="top__text">Username</span>
+          <span className="top__text top__text--admin">Class</span>
+          <span className="top__text">Edit</span>
           <span className="top__text">Delete</span>
         </div>
         <ul className="table__list">
@@ -104,12 +123,24 @@ export const TeacherTable = () => {
               <span className="table__span table__span--first">
                 {item.email}
               </span>
-              <span className="table__span table__span--two">
+              <span className="table__span table__span--nam">
                 {item.fullname}
               </span>
               <span className="table__span table__span--margin">
                 {item.username}
               </span>
+              <span className="table__span table__span--admin">
+                {item?.class?.name}
+              </span>
+              <button
+                className="table__btn table__btn--margin"
+                onClick={() => {
+                  setEditModal(true);
+                  setEditId(item.id);
+                }}
+              >
+                <EditIcon />
+              </button>
               <button
                 className="table__btn"
                 onClick={() => {

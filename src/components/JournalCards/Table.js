@@ -8,8 +8,7 @@ export const Table = () => {
   const [classId, setClassId] = useState("");
   const [room, setRoom] = useState();
   const [students, setStudents] = useState();
-  // console.log(students);
-
+  console.log(students);
   const StudentVal =
     students?.students || students?.users || students
       ? students?.students || students?.users || students
@@ -35,7 +34,7 @@ export const Table = () => {
   };
 
   return (
-    <div className="table">
+    <div className="tablee">
       <div className="table__inner">
         <div className="table__links scroller">
           <ScrollerBtn />
@@ -76,7 +75,7 @@ export const Table = () => {
                 key={e.id}
                 img={Std3}
                 name={e.fullname}
-                classroom={e.name}
+                classroom={e.class?.name}
                 id={e.id}
               />
             ))}

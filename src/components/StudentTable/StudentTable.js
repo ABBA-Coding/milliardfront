@@ -168,7 +168,7 @@ export const StudentTable = () => {
         <div className="table__top top">
           <span className="top__text">image</span>
           <span className="top__text">Email</span>
-          <span className="top__text">FullName</span>
+          <span className="top__text top__text--student">FullName</span>
           <span className="top__text">{btn}</span>
           <span className="top__text">Edit</span>
           <span className="top__text">Delete</span>

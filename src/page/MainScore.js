@@ -1,8 +1,5 @@
 import React from "react";
-import Menber from "../assets/images/icons/score-img.png";
-import { Link } from "react-router-dom";
 import { GradesCard } from "../components/ScoreCards/GradesCard";
-import { MiniCards } from "../components/ScoreCards/MiniCards";
 
 export const MainScore = () => {
   return (

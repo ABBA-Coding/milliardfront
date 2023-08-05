@@ -13,9 +13,10 @@ export const AditionModal = ({ role }) => {
       role: "",
     },
     onSubmit: (values) => {
+      console.log(values.username);
       axios
         .post(
-          "https://milliard-kids-backend-production.up.railway.app/auth/register",
+          "http://localhost:5000/auth/register",
           {
             username: values.username,
             fullname: values.fullname,

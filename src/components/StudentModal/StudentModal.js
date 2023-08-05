@@ -17,7 +17,7 @@ export const StudentModal = ({ role }) => {
       // const classId = selectValue.current.value;
       axios
         .post(
-          "https://milliard-kids-backend-production.up.railway.app/auth/register",
+          "http://localhost:5000/auth/register",
           {
             username: values.username,
             fullname: values.fullname,

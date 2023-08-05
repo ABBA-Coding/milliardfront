@@ -50,6 +50,9 @@ export const AdminTable = () => {
     GetElementServices(`search/admin?query=`, setTeachers);
   }, []);
 
+  // axios.get("https://e76b-213-230-78-18.ngrok-free.app/search/admin?query=")
+  // .then(res => console.log(res))
+
   // seach
   const HandleChearch = (evt) => {
     const searchVal = evt.target.value;
@@ -95,7 +98,7 @@ export const AdminTable = () => {
 
       <div className="studenttable__main">
         <div className="table__top top">
-          <span className="top__text top__text--teacher">Email</span>
+          <span className="top__text top__text--another">Email</span>
           <span className="top__text">FullName</span>
           <span className="top__text">Username</span>
           <span className="top__text">Delete</span>
@@ -103,7 +106,7 @@ export const AdminTable = () => {
         <ul className="table__list">
           {StudentVal?.map((item) => (
             <li className="table__item" key={item.id}>
-              <span className="table__span table__span--first">
+              <span className="table__span table__span--another">
                 {item.email}
               </span>
               <span className="table__span table__span--two">

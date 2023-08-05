@@ -16,7 +16,7 @@ export const EditModalComponent = ({ edId }) => {
       // const classId = selectValue.current.value;
       axios
         .put(
-          `https://milliard-kids-backend-production.up.railway.app/user?id=${edId}`,
+          `http://localhost:5000/user?id=${edId}`,
           {
             class_id: selectValue?.current?.value,
           },

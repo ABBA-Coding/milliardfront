@@ -92,6 +92,38 @@ export const InstagramIcon = () => {
   );
 };
 
+export const DropBtn = () => {
+  return (
+    <svg
+      width={54}
+      height={54}
+      viewBox="0 0 54 54"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx={27} cy={27} r={27} fill="#F3F3F3" />
+      <path
+        d="M15 19H40"
+        stroke="#188CE5"
+        strokeWidth={2}
+        strokeLinecap="round"
+      />
+      <path
+        d="M15 26.4999H40"
+        stroke="#188CE5"
+        strokeWidth={2}
+        strokeLinecap="round"
+      />
+      <path
+        d="M15 34H40"
+        stroke="#188CE5"
+        strokeWidth={2}
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+
 export const MessageIcon = () => {
   return (
     <svg

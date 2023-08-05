@@ -12,15 +12,34 @@
       "reyting": "Reyting"
     }
   },
-  "product": {
-    "top": "Our top products",
-    "question": "Do you have any questions?",
-    "sent": "Sending",
-    "radiator": "Radiators",
-    "see": "See all",
-    "radiators": "Types of radiators",
-    "learn": "Learn more",
-    "detail": "Detailed video",
-    "show": "Our showroom"
+  "main": {
+    "teacher": "Teachers",
+    "parent": "Parents"
+  },
+  "footer": {
+    "main": "Mainly",
+    "contact": "Contact",
+    "accaunt": "My accaunt"
+  },
+  "score": {
+    "main": {
+      "grades": "Grades",
+      "date": "Choose date",
+      "bussines": "Business treatment"
+    },
+    "sciences": {
+      "communic": "Communicate",
+      "critic": "Critical thinking",
+      "problem": "Solving problems",
+      "solution": "Application of solutions",
+      "stress": "Reaction to a stressful situation"
+    },
+    "section": {
+      "freely": "He expresses his thoughts freely",
+      "activ": "Actively listens",
+      "body": "Freely uses body movements in speech",
+      "speach": "Involves the audience in his speech",
+      "group": "Actively participates in group communication"
+    }
   }
 }

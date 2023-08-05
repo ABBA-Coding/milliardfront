@@ -1,0 +1,197 @@
+.settings {
+  padding-top: 90px;
+  .settings__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .setting__left {
+    .left__form {
+      // width: 100%;
+      width: 580px;
+      padding: 20px;
+      background-color: $white;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .form__title {
+      color: $dark;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 25px;
+    }
+
+    .form__inneer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .form__left {
+      width: 100%;
+      max-width: 260px;
+    }
+
+    .form__right {
+      width: 100%;
+      max-width: 260px;
+    }
+
+    .inner__title {
+      color: $dark;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+
+    .form__input {
+      width: 100%;
+      border: none;
+      padding: 7px 0;
+      color: #3d3d3d;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #a0a4aa;
+      &::placeholder {
+        opacity: 0.7;
+      }
+    }
+
+    .form__wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .form__btn {
+      color: $white;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: $green;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        transition: all 0.3s ease;
+        background-color: $blue;
+      }
+    }
+  }
+  .settings__right {
+    width: 100%;
+    max-width: 580px;
+    padding: 20px;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .right__top {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 20px;
+    }
+
+    .form__one {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .one__title {
+      color: $dark;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+
+    .one__label {
+      margin-bottom: 15px;
+    }
+
+    .one__span {
+      img {
+        width: 200px;
+        height: 125px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    }
+
+    .one__btn {
+      color: $white;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding: 7px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #024742;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        transition: all 0.3s ease;
+        background-color: #188ce5;
+      }
+    }
+
+    .right__end {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .end__title {
+      color: $dark;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
+    .end__input {
+      width: 100%;
+      max-width: 200px;
+      border: none;
+      padding: 7px 10px;
+      color: #3d3d3d;
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #a0a4aa;
+      &::placeholder {
+        opacity: 0.8;
+      }
+    }
+  }
+}

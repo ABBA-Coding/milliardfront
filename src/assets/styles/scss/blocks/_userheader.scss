@@ -1,4 +1,4 @@
-.header {
+.userheader {
   padding: 17px 0;
   background-color: $white;
   position: relative;
@@ -24,7 +24,7 @@
       }
     }
 
-    @include media-max(800px) {
+    @include media-max(930px) {
       display: block;
     }
     @include media-max(600px) {
@@ -70,7 +70,7 @@
       top: 88px;
     }
 
-    @include media-max(800px) {
+    @include media-max(930px) {
       display: block;
     }
 
@@ -159,11 +159,11 @@
     display: flex;
     align-items: center;
 
-    @include media-max(1000px) {
+    @include media-max(1100px) {
       margin-right: 40px;
     }
 
-    @include media-max(800px) {
+    @include media-max(930px) {
       display: none;
     }
 

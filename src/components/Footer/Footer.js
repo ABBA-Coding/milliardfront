@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/icons/logo.svg";
-// import Usa from "../../assets/images/icons/united.png";
-// import Rus from "../../assets/images/icons/russia.png";
-// import Uzb from "../../assets/images/icons/uzbekistan.png";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -10,7 +7,7 @@ import {
 } from "../../assets/images/img/img";
 import { useTranslation } from "react-i18next";
 export const Footer = () => {
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="container">
@@ -56,11 +53,11 @@ export const Footer = () => {
             </div>
             <div className="top__right right">
               <div className="right__cover">
-                <strong className="right__title">Mainly</strong>
+                <strong className="right__title ">{t("footer.main")}</strong>
                 <ul className="right__list">
                   <li className="right__item">
                     <a className="right__link" href="#/">
-                      My account
+                      {t("footer.accaunt")}
                     </a>
                   </li>
                   <li className="right__item">
@@ -72,7 +69,7 @@ export const Footer = () => {
               </div>
 
               <div className="right__cover">
-                <strong className="right__title">Contact</strong>
+                <strong className="right__title">{t("footer.contact")}</strong>
                 <ul className="right__list">
                   <li className="right__item">
                     <a className="right__link" href="tel:+998952503220">

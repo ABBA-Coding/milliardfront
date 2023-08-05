@@ -141,18 +141,32 @@
 }
 
 .agent {
-  padding: 20px;
+  padding: 40px;
   z-index: 11;
+
+  @include media-max(600px) {
+    padding: 20px;
+    width: 500px;
+  }
+  @include media-max(540px) {
+    width: 400px;
+  }
+  @include media-max(450px) {
+    width: 350px;
+  }
+  @include media-max(370px) {
+    width: 310px;
+  }
   .login__input--select {
     margin-bottom: 20px;
   }
 
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   table {
     border-collapse: collapse;
-
+    margin-bottom: 15px;
     thead tr {
       th {
         width: 100px !important;
@@ -161,7 +175,7 @@
         border: 1px solid #b4b4b4;
         text-align: center;
         font-family: Manrope;
-        font-size: 15px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -178,7 +192,7 @@
         text-align: center;
         color: $black;
         font-family: Manrope;
-        font-size: 20px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;

@@ -1,20 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/images/icons/logo.svg";
 import Avatar from "../../assets/images/icons/man2.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { AvatarIcon } from "../../assets/images/img/img";
+import { AvatarIcon, DropBtn } from "../../assets/images/img/img";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import { DropHeader } from "../DropHeader/DropHeader";
+import { GetElementServices } from "../../services/AxiosGenerator";
 
 export const Header = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+  const [meta, setMeta] = useState();
+  useEffect(() => {
+    GetElementServices(`meta`, setMeta);
+  }, []);
+
+  const handleDrop = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className="header">
       <div className="container">
         <div className="header__inner">
+          <button
+            className="header-drop"
+            onClick={handleDrop}
+            aria-label="burger-button"
+          >
+            <DropBtn />
+          </button>
+
+          {isOpen && (
+            <DropHeader
+              open={isOpen}
+              setOpen={setIsOpen}
+              call={meta?.contact}
+            />
+          )}
+
           <Link className=".header__link" to="/">
             <img className="header__img" src={logo} alt="site logo" />
           </Link>
@@ -43,10 +70,10 @@ export const Header = () => {
                   </NavLink>
                 </li>
                 <li className="nav__item">
-                  <Tippy animation="fade" content="Call us now">
+                  <Tippy animation="fade" content={`Call +998${meta?.contact}`}>
                     <a
                       className="nav__link nav__link--pad"
-                      href="tel:+998997652220"
+                      href={`tel:+998${meta?.contact}`}
                     >
                       {t("header.nav.contact")}
                     </a>
@@ -68,9 +95,6 @@ export const Header = () => {
                   <option className="nav__option" value="uz">
                     Uzbek
                   </option>
-                  <option className="nav__option" value="ru">
-                    Russian
-                  </option>
                 </select>
               </Tippy>
             </nav>
@@ -78,6 +102,7 @@ export const Header = () => {
             <div className="header__avatar avatar">
               <Tippy animation="fade" content="Log Out">
                 <button
+                  aria-label="exit-button"
                   className="avatar__btn"
                   onClick={() => {
                     localStorage.removeItem("token");

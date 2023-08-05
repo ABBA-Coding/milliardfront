@@ -11,13 +11,13 @@ export const ReytingItem = ({ name, point, clas }) => {
   );
 
   // console.log(ClasCount);
-  if (ClasCount > 100) {
+  if (ClasCount > 350) {
     clas = "gold";
   }
-  if (ClasCount <= 100 && ClasCount > 50) {
+  if (ClasCount <= 350 && ClasCount > 250) {
     clas = "silver";
   }
-  if (ClasCount <= 50) {
+  if (ClasCount <= 250) {
     clas = "bronze";
   }
   return (
@@ -29,18 +29,10 @@ export const ReytingItem = ({ name, point, clas }) => {
             count += e;
           })
         )}
-        {`${Math.floor(count)} `}%
+        {/* {`${Math.floor(count)} `}% */}
+        {`${Math.floor((count = (count / 500) * 100))}`} %
         <span className="visually-hidden">{(count = 0)}</span>
       </li>
     </>
   );
 };
-
-// {students?.user?.scores?.map((e) =>
-//   e.skill === param && e.createdAt === time
-//     ? e?.scores.forEach((number) => {
-//         sum += number;
-//         // console.log(sum);
-//       })
-//     : ""
-// )}

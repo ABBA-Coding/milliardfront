@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import Menber from "../../assets/images/icons/score-img.png";
 import { GetElementServices } from "../../services/AxiosGenerator";
 import useZustand from "../../context/CreateZustand";
+import { useTranslation } from "react-i18next";
 
 export const GradesCard = () => {
+  const { t } = useTranslation();
   const [clock, setClock] = useState();
   const [students, setStudents] = useState();
   const UserId = localStorage.getItem("userId");
   const setTime = useZustand((state) => state?.setTime);
-
-  // console.log(students ? students : "");
 
   useEffect(() => {
     GetElementServices(`student?id=${UserId}`, setStudents);
@@ -25,7 +25,8 @@ export const GradesCard = () => {
       )
     );
   }, [students?.user?.scores]);
-  // console.log(dates);
+
+  const lastElement = clock ? clock : dates[dates?.length - 1];
 
   return (
     <>
@@ -35,7 +36,7 @@ export const GradesCard = () => {
             <img className="info__img" src={Menber} alt="menber" />
           </div>
           <div className="info__wrap">
-            <h4 className="info__title">Baholar</h4>
+            <h4 className="info__title">{t("score.main.grades")}</h4>
             <select
               className="info__select"
               defaultValue={""}
@@ -45,10 +46,10 @@ export const GradesCard = () => {
               }}
             >
               <option className="info__option" value={""}>
-                Choose date
+                {t("score.main.date")}
               </option>
               {dates?.map((item, index) => (
-                <option className="info__option" value={item.index}>
+                <option key={index} className="info__option" value={item.index}>
                   {item}
                 </option>
               ))}
@@ -56,33 +57,34 @@ export const GradesCard = () => {
           </div>
         </div>
         {students?.user?.scores?.map((e) =>
-          e.createdAt === clock
+          e.createdAt === lastElement
             ? e?.scores.forEach((number) => {
                 sum += number;
-                console.log(sum);
+                // console.log(sum);
               })
             : ""
         )}
         <span className="info__count">
-          {`${Math.floor((sum = (sum / 80) * 100))} `}%
+          {`${Math.floor((sum = (sum / 125) * 100))} `}%
         </span>
       </div>
       <div className="info__down down">
         <ul className="down__list">
-          {students?.user?.scores?.map((item) =>
-            item.skill === "COMMUNICATION" && item.createdAt === clock ? (
-              <li className="down__item item">
+          {students?.user?.scores?.map((item, index) =>
+            item.skill === "COMMUNICATION" && item.createdAt === lastElement ? (
+              <li key={index} className="down__item item">
                 <Link className="item__link" to={`allscore`}>
                   <div className="item__left">
-                    <h5 className="item__title">Muloqot qilish</h5>
-                    <span className="item__lorem">Lorem</span>
+                    <h5 className="item__title">
+                      {t("score.sciences.communic")}
+                    </h5>
                   </div>
                   <span className="item__count">
                     <span className="visually-hidden"> {(sum = 0)}</span>
                     {item?.scores.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 20) * 100)}%`}
+                    {`${(sum = (sum / 25) * 100)}%`}
                   </span>
                 </Link>
               </li>
@@ -91,21 +93,22 @@ export const GradesCard = () => {
             )
           )}
 
-          {students?.user?.scores?.map((item) =>
-            item.skill === "CRITICAL_THINKING" && item.createdAt === clock ? (
-              <li className="down__item item">
+          {students?.user?.scores?.map((item, index) =>
+            item.skill === "CRITICAL_THINKING" &&
+            item.createdAt === lastElement ? (
+              <li key={index} className="down__item item">
                 <Link className="item__link" to={"allscore"}>
                   <div className="item__left">
-                    <h5 className="item__title">Tanqidiy fikrlash</h5>
-                    <span className="item__lorem">Lorem</span>
+                    <h5 className="item__title">
+                      {t("score.sciences.critic")}
+                    </h5>
                   </div>
                   <span className="item__count">
                     <span className="visually-hidden"> {(sum = 0)}</span>
                     {item?.scores?.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 20) * 100)}%`}
-                    {/* {setTwo(sum)} */}
+                    {`${(sum = (sum / 25) * 100)}%`}
                   </span>
                 </Link>
               </li>
@@ -114,21 +117,22 @@ export const GradesCard = () => {
             )
           )}
 
-          {students?.user?.scores?.map((item) =>
-            item.skill === "PROBLEM_SOLVING" && item.createdAt === clock ? (
-              <li className="down__item item">
+          {students?.user?.scores?.map((item, index) =>
+            item.skill === "PROBLEM_SOLVING" &&
+            item.createdAt === lastElement ? (
+              <li key={index} className="down__item item">
                 <Link className="item__link" to={"allscore"}>
                   <div className="item__left">
-                    <h5 className="item__title">Muammolarni hal qilish</h5>
-                    <span className="item__lorem">Lorem</span>
+                    <h5 className="item__title">
+                      {t("score.sciences.problem")}
+                    </h5>
                   </div>
                   <span className="item__count">
                     <span className="visually-hidden"> {(sum = 0)}</span>
                     {item?.scores?.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 20) * 100)}%`}
-                    {/* {console.log(sum)} */}
+                    {`${(sum = (sum / 25) * 100)}%`}
                   </span>
                 </Link>
               </li>
@@ -136,21 +140,22 @@ export const GradesCard = () => {
               ""
             )
           )}
-          {students?.user?.scores?.map((item) =>
-            item.skill === "IMPLEMENTATION" && item.createdAt === clock ? (
-              <li className="down__item item">
+          {students?.user?.scores?.map((item, index) =>
+            item.skill === "IMPLEMENTATION" &&
+            item.createdAt === lastElement ? (
+              <li key={index} className="down__item item">
                 <Link className="item__link" to={"allscore"}>
                   <div className="item__left">
-                    <h5 className="item__title">Yechimlarni qo'llash</h5>
-                    <span className="item__lorem">Lorem</span>
+                    <h5 className="item__title">
+                      {t("score.sciences.solution")}
+                    </h5>
                   </div>
                   <span className="item__count">
                     <span className="visually-hidden"> {(sum = 0)}</span>
                     {item?.scores?.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 20) * 100)}%`}
-                    {/* {console.log(sum)} */}
+                    {`${(sum = (sum / 25) * 100)}%`}
                   </span>
                 </Link>
               </li>
@@ -159,15 +164,29 @@ export const GradesCard = () => {
             )
           )}
 
-          {/* <li className="down__item item">
-            <Link className="item__link" to={link}>
-              <div className="item__left">
-                <h5 className="item__title">Muloqot qilish</h5>
-                <span className="item__lorem">Lorem</span>
-              </div>
-              <span className="item__count">20%</span>
-            </Link>
-          </li> */}
+          {students?.user?.scores?.map((item, index) =>
+            item.skill === "STRESS_REACTIVITY" &&
+            item.createdAt === lastElement ? (
+              <li key={index} className="down__item item">
+                <Link className="item__link" to={"allscore"}>
+                  <div className="item__left">
+                    <h5 className="item__title">
+                      {t("score.sciences.stress")}
+                    </h5>
+                  </div>
+                  <span className="item__count">
+                    <span className="visually-hidden"> {(sum = 0)}</span>
+                    {item?.scores?.forEach((number) => {
+                      sum += number;
+                    })}
+                    {`${(sum = (sum / 25) * 100)}%`}
+                  </span>
+                </Link>
+              </li>
+            ) : (
+              ""
+            )
+          )}
         </ul>
       </div>
     </>

@@ -4,20 +4,22 @@ import { Route, Routes } from "react-router-dom";
 import { StudentTable } from "../components/StudentTable/StudentTable";
 import { TeacherTable } from "../components/TeacherTable/TeacherTable";
 import { AdminTable } from "../components/AdminTable/AdminTable";
-import useZustand from "../context/CreateZustand";
+import { SettingTable } from "../components/SettingTable/SettingTable";
+// import useZustand from "../context/CreateZustand";
 
 export const Admin = () => {
-  const roles = useZustand((state) => state?.roles);
-  console.log(roles);
+  // const roles = useZustand((state) => state?.roles);
+  // console.log(roles);
   return (
     <div className="admin">
       <div className="admin__inner">
         <AdminBar />
         <div className="admin__table info">
           <Routes>
+            <Route index element={<AdminTable />} />
             <Route path="/class" element={<TeacherTable />} />
             <Route path="/student" element={<StudentTable />} />
-            <Route index element={<AdminTable />} />
+            <Route path="/settings" element={<SettingTable />} />
           </Routes>
         </div>
       </div>

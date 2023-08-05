@@ -29,6 +29,12 @@ export const AdminBar = () => {
         >
           Classes
         </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "adminbar__link")}
+          to="/settings"
+        >
+          Settings
+        </NavLink>
       </div>
       <div className="adminbar__Links"></div>
       <button

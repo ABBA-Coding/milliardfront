@@ -2,7 +2,7 @@
   "header": {
     "nav": {
       "main": "Asosiy",
-      "score": "Xisob",
+      "score": "Hisob",
       "table": "Vaqt jadvali",
       "contact": "Aloqa",
       "registr": "Ro'yxatdan o'tish",
@@ -12,15 +12,34 @@
       "reyting": "Reyting"
     }
   },
-  "product": {
-    "top": "Bizning top tovarlarimiz",
-    "question": "Savollaringiz bormi?",
-    "sent": "Yuborish",
-    "radiator": "Radiatorlar",
-    "see": "Barchasini ko’rish",
-    "radiators": "Radiatorlarning turlari",
-    "learn": "Batafsil bilish",
-    "detail": "Batafsil video",
-    "show": "Bizning show room"
+  "main": {
+    "teacher": "Ustozlar",
+    "parent": "ota-onalar"
+  },
+  "footer": {
+    "main": "Asosan",
+    "contact": "Aloqa",
+    "accaunt": "Mening hisobim"
+  },
+  "score": {
+    "main": {
+      "grades": "Baholar",
+      "date": "Sanani tanlang",
+      "bussines": "Biznesni davolash"
+    },
+    "sciences": {
+      "communic": "Muloqot qilish",
+      "critic": "Tanqidiy fikrlash",
+      "problem": "Muammolarni hal qilish",
+      "solution": "Yechimlarni qo'llash",
+      "stress": "Stressli vaziyatga munosabat"
+    },
+    "section": {
+      "freely": "O'z fikrlarini erkin ifoda etadi",
+      "activ": "Faol tinglaydi",
+      "body": "Nutqda tana harakatlaridan erkin foydalanadi",
+      "speach": "O'z nutqiga tinglovchilarni jalb qiladi",
+      "group": "Guruh muloqotida faol ishtirok etadi"
+    }
   }
 }

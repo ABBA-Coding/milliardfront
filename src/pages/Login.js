@@ -13,15 +13,12 @@ export const Login = () => {
       password: "",
     },
     onSubmit: (values) => {
-      // console.log(values.email, values.password);
+      console.log(values.email, values.password);
       axios
-        .post(
-          "https://milliard-kids-backend-production.up.railway.app/auth/login",
-          {
-            email: values.email,
-            password: values.password,
-          }
-        )
+        .post("http://localhost:5000/auth/login", {
+          email: values.email,
+          password: values.password,
+        })
         .then((data) => {
           console.log(data);
           if (data.status === 200) {
