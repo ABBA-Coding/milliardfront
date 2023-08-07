@@ -16,7 +16,7 @@ export const AditionModal = ({ role }) => {
       console.log(values.username);
       axios
         .post(
-          "http://localhost:5000/auth/register",
+          "https://milliardapi.itlink.uz/auth/register",
           {
             username: values.username,
             fullname: values.fullname,

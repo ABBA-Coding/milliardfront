@@ -6,11 +6,8 @@ import { TeacherTable } from "../components/TeacherTable/TeacherTable";
 import { AdminTable } from "../components/AdminTable/AdminTable";
 import { SettingTable } from "../components/SettingTable/SettingTable";
 import { ClassTable } from "../components/ClassTable/Classtable";
-// import useZustand from "../context/CreateZustand";
 
 export const Admin = () => {
-  // const roles = useZustand((state) => state?.roles);
-  // console.log(roles);
   return (
     <div className="admin">
       <div className="admin__inner">

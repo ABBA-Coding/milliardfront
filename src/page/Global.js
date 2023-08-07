@@ -14,7 +14,7 @@ export const Global = () => {
       <div
         className="userglobal__inner"
         style={{
-          backgroundImage: `url(http://localhost:5000/${meta?.studentImg})`,
+          backgroundImage: `url(https://milliardapi.itlink.uz/${meta?.studentImg})`,
         }}
       >
         <h1 className="global__title">{t("main.parent")}</h1>

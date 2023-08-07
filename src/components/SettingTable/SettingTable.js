@@ -33,7 +33,7 @@ export const SettingTable = () => {
     formData.append("image", studentImg?.current?.files[0]);
 
     axios
-      .post("http://localhost:5000/upload", formData, {
+      .post("https://milliardapi.itlink.uz/upload", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -58,7 +58,7 @@ export const SettingTable = () => {
     formData.append("image", teacerImg?.current?.files[0]);
 
     axios
-      .post("http://localhost:5000/upload", formData, {
+      .post("https://milliardapi.itlink.uz/upload", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -83,7 +83,7 @@ export const SettingTable = () => {
     evt.preventDefault();
     axios
       .put(
-        `http://localhost:5000/meta`,
+        `https://milliardapi.itlink.uz/meta`,
         {
           contact: contact?.current?.value,
           studentImg: studentImages ? studentImages : "",
@@ -112,7 +112,7 @@ export const SettingTable = () => {
     evt.preventDefault();
     axios
       .put(
-        "http://localhost:5000/shedule",
+        "https://milliardapi.itlink.uz/shedule",
         {
           days: [
             dataOne?.current?.value,
@@ -230,7 +230,9 @@ export const SettingTable = () => {
                 />
                 <span className="one__span">
                   <img
-                    src={`http://localhost:5000/${studentImages}` || AddImg}
+                    src={
+                      `https://milliardapi.itlink.uz/${studentImages}` || AddImg
+                    }
                     alt="add img"
                   />
                 </span>
@@ -251,7 +253,9 @@ export const SettingTable = () => {
                 />
                 <span className="one__span">
                   <img
-                    src={`http://localhost:5000/${teacherImages}` || AddImg}
+                    src={
+                      `https://milliardapi.itlink.uz/${teacherImages}` || AddImg
+                    }
                     alt="add img"
                   />
                 </span>

@@ -14,7 +14,7 @@ export const Registr = () => {
     },
     onSubmit: (values) => {
       axios
-        .post("http://localhost:5000/auth/register", {
+        .post("https://milliardapi.itlink.uz/auth/register", {
           username: values.username,
           email: values.email,
           password: values.password,

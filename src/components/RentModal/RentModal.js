@@ -1,8 +1,10 @@
 import { useFormik } from "formik";
 import axios from "axios";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export const RentModal = ({ isOpen, id }) => {
+  const { t } = useTranslation();
   const token = localStorage.getItem("token");
   const dateRef = useRef();
   const selectValue = useRef();
@@ -108,7 +110,7 @@ export const RentModal = ({ isOpen, id }) => {
       );
       try {
         const scoresResponse = await axios.post(
-          `http://localhost:5000/student/mark?id=${id}`,
+          `https://milliardapi.itlink.uz/student/mark?id=${id}`,
           Arr,
           {
             headers: {
@@ -140,7 +142,7 @@ export const RentModal = ({ isOpen, id }) => {
             }}
             htmlFor="datepicker"
           >
-            Sanani tanlash
+            {t("score.main.date")}
           </label>
           <input
             className="custom-date-input "
@@ -164,7 +166,7 @@ export const RentModal = ({ isOpen, id }) => {
             }}
             htmlFor="username"
           >
-            Muloqot qilish
+            {t("score.sciences.communic")}
           </label>
           <select
             name="class_id"
@@ -261,7 +263,7 @@ export const RentModal = ({ isOpen, id }) => {
             }}
             htmlFor="username"
           >
-            Tanqidiy fikrlash
+            {t("score.sciences.critic")}
           </label>
           <select
             name="class_id"
@@ -347,7 +349,7 @@ export const RentModal = ({ isOpen, id }) => {
             }}
             htmlFor="username"
           >
-            Problem solving
+            {t("score.sciences.problem")}
           </label>
           <select
             name="class_id"
@@ -433,7 +435,7 @@ export const RentModal = ({ isOpen, id }) => {
             }}
             htmlFor="username"
           >
-            Muammoni hal qilish
+            {t("score.sciences.solution")}
           </label>
           <select
             name="class_id"
@@ -519,7 +521,7 @@ export const RentModal = ({ isOpen, id }) => {
             }}
             htmlFor="username"
           >
-            Stressli vaziyatga munosabat
+            {t("score.sciences.stress")}
           </label>
           <select
             name="class_id"

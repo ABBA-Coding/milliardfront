@@ -53,10 +53,6 @@ export const TeacherTable = () => {
     GetElementServices(`teachers`, setTeachers);
   }, []);
 
-  // useEffect(() => {
-  //   GetElementServices(`class/all`, setTeachers);
-  // }, []);
-
   // seach
   const HandleChearch = (evt) => {
     const searchVal = evt.target.value;

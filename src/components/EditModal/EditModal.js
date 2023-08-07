@@ -16,7 +16,7 @@ export const EditModalComponent = ({ edId }) => {
       // const classId = selectValue.current.value;
       axios
         .put(
-          `http://localhost:5000/user?id=${edId}`,
+          `https://milliardapi.itlink.uz/user?id=${edId}`,
           {
             class_id: selectValue?.current?.value,
           },

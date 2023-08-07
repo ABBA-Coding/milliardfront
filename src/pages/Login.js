@@ -15,7 +15,7 @@ export const Login = () => {
     onSubmit: (values) => {
       console.log(values.email, values.password);
       axios
-        .post("http://localhost:5000/auth/login", {
+        .post("https://milliardapi.itlink.uz/auth/login", {
           email: values.email,
           password: values.password,
         })
@@ -31,7 +31,10 @@ export const Login = () => {
             window.location.reload(false);
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+          alert("Xatolik, qayta urinibb ko'ring!!!");
+        });
     },
 
     validationSchema: LoginSchema,

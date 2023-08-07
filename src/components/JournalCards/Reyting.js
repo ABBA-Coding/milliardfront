@@ -16,7 +16,7 @@ export const Reyting = () => {
 
   useState(() => {
     async function getClasses() {
-      const response = await fetch("http://localhost:5000/class/all", {
+      const response = await fetch("https://milliardapi.itlink.uz/class/all", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
