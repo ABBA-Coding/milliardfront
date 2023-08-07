@@ -468,6 +468,10 @@
       padding: 45px 25px 45px 25px;
     }
 
+    @include media-max(450px) {
+      padding: 45px 10px 45px 10px;
+    }
+
     .points__inner {
       display: flex;
       // flex-wrap: wrap;

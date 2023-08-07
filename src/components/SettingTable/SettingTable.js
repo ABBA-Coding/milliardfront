@@ -149,10 +149,10 @@ export const SettingTable = () => {
       <div className="settings__inner">
         <div className="setting__left left">
           <form className="left__form form" onSubmit={handleSubmit}>
-            <h3 className="form__title">Kunlar va vaqni kiriting</h3>
+            <h3 className="form__title">Enter the days and time</h3>
             <div className="form__inneer inner">
               <div className="form__left">
-                <h4 className="inner__title">Sanalar</h4>
+                <h4 className="inner__title">Dates</h4>
                 <input
                   ref={dataOne}
                   name="frist"
@@ -185,7 +185,7 @@ export const SettingTable = () => {
               </div>
 
               <div className="form__right">
-                <h4 className="inner__title">Vaqtlar</h4>
+                <h4 className="inner__title">Times</h4>
                 <input
                   ref={dataFive}
                   name="five"
@@ -220,7 +220,7 @@ export const SettingTable = () => {
         <div className="settings__right right">
           <div className="right__top">
             <form className="form__one one" onSubmit={getFirstImg}>
-              <h3 className="one__title">Ota-ona bosh sahifasi uchun</h3>
+              <h3 className="one__title">For parent home page</h3>
               <label className="one__label">
                 <input
                   ref={studentImg}
@@ -236,12 +236,12 @@ export const SettingTable = () => {
                 </span>
               </label>
               <button className="one__btn" type="submit">
-                Tanlash
+                choose
               </button>
             </form>
 
             <form className="form__one one" onSubmit={getSecondImg}>
-              <h3 className="one__title">O'qituvchilar bosh sahifasi uchun</h3>
+              <h3 className="one__title">For teachers home page</h3>
               <label className="one__label">
                 <input
                   ref={teacerImg}
@@ -256,12 +256,12 @@ export const SettingTable = () => {
                   />
                 </span>
               </label>
-              <button className="one__btn">Tanlash</button>
+              <button className="one__btn">choose</button>
             </form>
           </div>
 
           <form className="right__end end " onSubmit={editMainSubmit}>
-            <h3 className="end__title">Bizning Raqam</h3>
+            <h3 className="end__title">Our number</h3>
             <input
               ref={contact}
               className="end__input"
@@ -271,7 +271,7 @@ export const SettingTable = () => {
               placeholder="993339977"
             />
             <div className="end__cover">
-              <button className="one__btn">Tanlash</button>
+              <button className="one__btn">Send</button>
             </div>
           </form>
         </div>

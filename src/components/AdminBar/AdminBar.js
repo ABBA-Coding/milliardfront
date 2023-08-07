@@ -1,10 +1,8 @@
 import React from "react";
 import Logo from "../../assets/images/icons/logo.svg";
 import { NavLink, useNavigate } from "react-router-dom";
-import useZustand from "../../context/CreateZustand";
 
 export const AdminBar = () => {
-  const setRoles = useZustand((state) => state?.setRoles);
   const navigate = useNavigate();
   return (
     <div className="adminbar">
@@ -26,6 +24,12 @@ export const AdminBar = () => {
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "adminbar__link")}
           to="/student"
+        >
+          Students
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "adminbar__link")}
+          to="/classes"
         >
           Classes
         </NavLink>

@@ -1557,6 +1557,11 @@ ul {
     padding: 45px 25px 45px 25px;
   }
 }
+@media only screen and (max-width: 450px) {
+  .journal .points {
+    padding: 45px 10px 45px 10px;
+  }
+}
 .journal .points .points__inner {
   display: flex;
   align-items: flex-start;
@@ -1866,6 +1871,11 @@ ul {
   line-height: normal;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 420px) {
+  .login .login__inner .login__title {
+    font-size: 28px;
+  }
+}
 .login .login__inner .login__question {
   margin-bottom: 10px;
 }
@@ -1874,6 +1884,8 @@ ul {
   margin-left: 20px;
 }
 .login .login__inner .login__form {
+  width: 100%;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1881,6 +1893,12 @@ ul {
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 10px;
+}
+@media only screen and (max-width: 420px) {
+  .login .login__inner .login__form {
+    padding: 30px 20px;
+    width: 100%;
+  }
 }
 .login .login__inner .login__form .form-group {
   display: flex;
@@ -1894,8 +1912,12 @@ ul {
   padding: 13px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 330px;
   font-size: 14px;
+}
+@media only screen and (max-width: 420px) {
+  .login .login__inner .login__form .form-group .login__input {
+    width: 230px;
+  }
 }
 .login .login__inner .login__form .form-group span {
   color: #e80303;
@@ -2074,10 +2096,16 @@ ul {
   line-height: normal;
   border-radius: 12px;
   background-color: #f6f6f6;
-  margin-bottom: 14px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .admin .adminbar .adminbar__link:last-child {
   margin-bottom: 0;
+}
+.admin .adminbar .adminbar__link:hover {
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .admin .adminbar .adminbar__link--log {
   border: none;
@@ -2116,7 +2144,8 @@ ul {
   line-height: normal;
   border-radius: 12px;
   background-color: #000;
-  margin-bottom: 14px;
+  margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .admin .adminbar .active:last-child {
   margin-bottom: 0;
@@ -2246,6 +2275,13 @@ ul {
 .admin .studenttable .studenttable__main .table__top .top__text--another {
   width: 310px !important;
 }
+.admin .studenttable .studenttable__main .classing {
+  justify-content: space-between;
+  padding: 22px 140px;
+}
+.admin .studenttable .studenttable__main .classing .top__text--classing {
+  margin: 0 !important;
+}
 .admin .studenttable .studenttable__main .table__list {
   height: 500px;
   overflow-y: scroll;
@@ -2325,6 +2361,12 @@ ul {
 }
 .admin .teachers {
   padding: 0;
+}
+
+.table__item--newitem {
+  width: 100%;
+  padding: 10px 140px !important;
+  justify-content: space-between !important;
 }
 
 .classmodal {

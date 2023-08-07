@@ -1,53 +1,43 @@
 import React, { useMemo, useState } from "react";
 import { ReytingItem } from "./ReytingItem";
 import { ScrollerBtn } from "./ScrollerBtn";
-import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 export const Reyting = () => {
+  const { t, i18n } = useTranslation();
   const [classes, setClasses] = useState([]);
   const [classId, setClassId] = useState("");
-
-  // const activeClass = useMemo(() => {
-  //   return classes.find((classItem) => classItem.id === classId);
-  // }, [classId, classes]);
-
-  const gold = "bronze";
-
-  const [proba, setproba] = useState();
-  // console.log(proba);
-  useState(() => {
-    async function getClasses() {
-      const classes = await axios.get("http://localhost:5000/class/all", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
-      setClasses(classes.data.classes);
-      setproba(classes?.data);
-    }
-    getClasses();
-  }, []);
-
-  // end
-  // const sum = (numbers = []) => {
-  //   return numbers.reduce((previous, current) => previous + current, 0);
-  // };
-
-  // proba?.classes.forEach((klass) => {
-  //   klass.students.forEach((student) => {
-  //     student.scores = sum(student.scores.map((score) => sum(score.scores)));
-  //   });
-
-  //   klass.students.sort((a, b) => a.scores - b.scores);
-  // });
-
-  // proba?.classes.sort((a, b) => (a.name > b.name ? -1 : 1));
-
-  // console.dir(proba, { depth: 4 });
 
   const activeClass = useMemo(() => {
     return classes.find((classItem) => classItem.id === classId);
   }, [classId, classes]);
+
+  const gold = "bronze";
+
+  useState(() => {
+    async function getClasses() {
+      const response = await fetch("http://localhost:5000/class/all", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+
+      const data = await response.json();
+
+      setClasses(data.classes);
+    }
+    getClasses();
+  }, []);
+
+  const sum = (numbers = []) => {
+    return numbers.reduce((previous, current) => previous + current, 0);
+  };
+
+  const sort = (a, b) => {
+    let aScore = sum(a.scores.map((score) => sum(score.scores)));
+    let bScore = sum(b.scores.map((score) => sum(score.scores)));
+    return bScore - aScore;
+  };
 
   return (
     <div className="reyting">
@@ -70,7 +60,7 @@ export const Reyting = () => {
           }}
           defaultValue={classes?.[0]?.id}
         >
-          <option value={""}>Sinfni tanlang</option>
+          <option value={""}>{t("reyting.choose")}</option>
           {classes?.map((item) => (
             <option key={item.id} value={item.id}>
               {item.name} sinfi
@@ -81,53 +71,62 @@ export const Reyting = () => {
         <div className="info__first down">
           {activeClass ? (
             <p className="down__text">
-              Umumiy o’quvchilar soni {activeClass?.students.length} ta
+              {t("table.total")} {activeClass?.students?.length}{" "}
+              {i18n?.language === "uz" ? "nafar" : ""}
             </p>
           ) : (
-            <p className="down__text">Umumiy o’quvchilar</p>
+            <p className="down__text">{t("reyting.general")}</p>
           )}
 
           <div className="down__cover">
-            <span className="down__color">Gold</span>
-            <span className="down__color">Silver</span>
-            <span className="down__color">Bronze</span>
+            <span className="down__color">{t("reyting.gold")}</span>
+            <span className="down__color">{t("reyting.siliver")}</span>
+            <span className="down__color">{t("reyting.bronze")}</span>
           </div>
         </div>
 
         <ul className="info__list">
           {activeClass
-            ? activeClass?.students.map((student) => (
-                <ReytingItem
-                  key={student.id}
-                  name={student.fullname}
-                  point={student}
-                  clas={gold}
-                />
-              ))
-            : classes?.map((e) =>
-                e.students?.map((item) => (
+            ? activeClass?.students
+                .sort(sort)
+                .map((student) => (
+                  <ReytingItem
+                    key={student.id}
+                    name={student.fullname}
+                    point={student}
+                    clas={gold}
+                  />
+                ))
+            : classes
+                ?.flatMap((value) => {
+                  return value.students;
+                })
+                .sort(sort)
+                .map((item) => (
                   <ReytingItem
                     key={item.id}
                     name={item.fullname}
                     point={item}
                     clas={gold}
                   />
-                ))
-              )}
+                ))}
         </ul>
         <div className="info__down down">
           {activeClass ? (
             <p className="down__text">
-              Umumiy o’quvchilar soni {activeClass?.students.length} ta
+              <p className="down__text">
+                {t("table.total")} {activeClass?.students?.length}{" "}
+                {i18n?.language === "uz" ? "nafar" : ""}
+              </p>
             </p>
           ) : (
-            <p className="down__text">Umumiy o’quvchilar</p>
+            <p className="down__text">{t("reyting.general")}</p>
           )}
 
           <div className="down__cover">
-            <span className="down__color">Gold</span>
-            <span className="down__color">Silver</span>
-            <span className="down__color">Bronze</span>
+            <span className="down__color">{t("reyting.gold")}</span>
+            <span className="down__color">{t("reyting.silver")}</span>
+            <span className="down__color">{t("reyting.bronze")}</span>
           </div>
         </div>
       </div>

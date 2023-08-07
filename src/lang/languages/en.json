@@ -40,6 +40,29 @@
       "body": "Freely uses body movements in speech",
       "speach": "Involves the audience in his speech",
       "group": "Actively participates in group communication"
+    },
+    "schedual": {
+      "time": "Schedule Time Table",
+      "pick": "Pick a Time",
+      "class": "Class leader"
     }
+  },
+  "table": {
+    "student": "All Students",
+    "total": "The total number of students is",
+    "date": "date",
+    "rent": "Evaluation",
+    "think": "Thoughts",
+    "active": "Aktive",
+    "oral": "Oral",
+    "audit": "Auditorium",
+    "grup": "Collective"
+  },
+  "reyting": {
+    "choose": "Choose class",
+    "general": "General students",
+    "gold": "Gold",
+    "silver": "Silver",
+    "bronze": "Bronze"
   }
 }

@@ -40,6 +40,29 @@
       "body": "Nutqda tana harakatlaridan erkin foydalanadi",
       "speach": "O'z nutqiga tinglovchilarni jalb qiladi",
       "group": "Guruh muloqotida faol ishtirok etadi"
+    },
+    "schedual": {
+      "time": "Vaqt jadvalini rejalashtirish",
+      "pick": "Vaqtni tanlang",
+      "class": "Sinf rahbari"
     }
+  },
+  "table": {
+    "student": "Barcha o‘quvchilar",
+    "total": "O‘quvchilarning umumiy soni",
+    "date": "sana",
+    "rent": "Baholash",
+    "think": "Fikrlar",
+    "active": "Faol",
+    "oral": "Og'zaki",
+    "audit": "Auditoriya",
+    "grup": "Jamoaviy"
+  },
+  "reyting": {
+    "choose": "Sinfni tanlang",
+    "general": "Umumiy o’quvchilar",
+    "gold": "Oltin",
+    "silver": "Kumush",
+    "bronze": "Bronza"
   }
 }

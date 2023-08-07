@@ -4,7 +4,6 @@ import {
   SearchServices,
 } from "../../services/AxiosGenerator";
 import Modal from "react-modal";
-import { ClassModal } from "../ClassModal/ClassModal";
 import Man from "../../assets/images/icons/man1.png";
 import { DeleteIcon, EditIcon } from "../../assets/images/img/img";
 import { StudentModal } from "../StudentModal/StudentModal";
@@ -23,19 +22,9 @@ export const StudentTable = () => {
       ? Students?.students || Students?.users || Students
       : Students?.students;
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
   const [addModal, setAddModal] = React.useState(false);
   const [editModal, setEditModal] = React.useState(false);
   const [deleteModal, setDeleteModal] = React.useState(false);
-
-  // Modal
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
 
   const customStyles = {
     content: {
@@ -106,7 +95,7 @@ export const StudentTable = () => {
             className="studenttable__search"
             type="search"
             name="search"
-            placeholder="Search Preson"
+            placeholder="Search Student"
           />
         </label>
 
@@ -123,19 +112,8 @@ export const StudentTable = () => {
             <option value={item.id}>{item.name} sinfi</option>
           ))}
         </select>
-
-        <button className="studenttable__btn" onClick={() => openModal()}>
-          Create new
-        </button>
       </div>
       {/* modals */}
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-      >
-        <ClassModal IsOpen={setIsOpen} />
-      </Modal>
 
       <Modal
         isOpen={addModal}

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import User from "../../assets/images/icons/user.png";
 import { GetElementServices } from "../../services/AxiosGenerator";
+import { useTranslation } from "react-i18next";
 
 export const EventCard = () => {
+  const { t } = useTranslation();
   const [teacher, setTeacher] = useState();
   const [classe, setClass] = useState();
 
@@ -26,7 +28,7 @@ export const EventCard = () => {
           <div className="info__cover">
             <h4 className="info__title">{classe?.teacher?.fullname}</h4>
             <p className="info__text">
-              {teacher?.user?.class?.name} Sinif Rahbari
+              {teacher?.user?.class?.name} {t("score.schedual.class")}
             </p>
           </div>
         </div>

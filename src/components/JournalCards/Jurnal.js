@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 import { GetElementServices } from "../../services/AxiosGenerator";
 import Modal from "react-modal";
 import { RentModal } from "../RentModal/RentModal";
+import { useTranslation } from "react-i18next";
 Modal.setAppElement("#root");
 
 const Jurnal = () => {
+  const { t } = useTranslation();
   const [addModal, setAddModal] = React.useState(false);
   const [student, SetStudent] = useState([]);
   const { id } = useParams();
@@ -53,7 +55,7 @@ const Jurnal = () => {
           <table>
             <thead>
               <tr>
-                <th>Date</th>
+                <th>{t("table.date")}</th>
               </tr>
             </thead>
             <tbody>
@@ -67,15 +69,15 @@ const Jurnal = () => {
         </div>
 
         <div className="points__section section">
-          <p className="section__title">Muloqot qilish</p>
+          <p className="section__title">{t("score.sciences.communic")}</p>
           <table>
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("table.think")}</th>
+                <th>{t("table.active")}</th>
+                <th>{t("table.oral")}</th>
+                <th>{t("table.audit")}</th>
+                <th>{t("table.grup")}</th>
               </tr>
             </thead>
             <tbody>
@@ -93,15 +95,15 @@ const Jurnal = () => {
         </div>
 
         <div className="points__section section">
-          <p className="section__title">Tanqidiy fikrlash:</p>
+          <p className="section__title">{t("score.sciences.critic")}</p>
           <table>
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("table.think")}</th>
+                <th>{t("table.active")}</th>
+                <th>{t("table.oral")}</th>
+                <th>{t("table.audit")}</th>
+                <th>{t("table.grup")}</th>
               </tr>
             </thead>
             <tbody>
@@ -117,15 +119,15 @@ const Jurnal = () => {
         </div>
 
         <div className="points__section section">
-          <p className="section__title">Muammoni hal qilish:</p>
+          <p className="section__title">{t("score.sciences.problem")}</p>
           <table>
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("table.think")}</th>
+                <th>{t("table.active")}</th>
+                <th>{t("table.oral")}</th>
+                <th>{t("table.audit")}</th>
+                <th>{t("table.grup")}</th>
               </tr>
             </thead>
             <tbody>
@@ -141,15 +143,15 @@ const Jurnal = () => {
         </div>
 
         <div className="points__section section">
-          <p className="section__title">Yechimlarni qo'llash:</p>
+          <p className="section__title">{t("score.sciences.solution")}</p>
           <table>
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("table.think")}</th>
+                <th>{t("table.active")}</th>
+                <th>{t("table.oral")}</th>
+                <th>{t("table.audit")}</th>
+                <th>{t("table.grup")}</th>
               </tr>
             </thead>
             <tbody>
@@ -165,15 +167,15 @@ const Jurnal = () => {
         </div>
 
         <div className="points__section section">
-          <p className="section__title">Stressli vaziyatga munosabat:</p>
+          <p className="section__title">{t("score.sciences.stress")}</p>
           <table>
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("table.think")}</th>
+                <th>{t("table.active")}</th>
+                <th>{t("table.oral")}</th>
+                <th>{t("table.audit")}</th>
+                <th>{t("table.grup")}</th>
               </tr>
             </thead>
             <tbody>
@@ -199,7 +201,7 @@ const Jurnal = () => {
             }}
           >
             <option className="second__option" value={""}>
-              Choose date
+              {t("score.main.date")}
             </option>
             {dates?.map((item, index) => (
               <option key={index} className="info__option" value={item.index}>
@@ -212,7 +214,7 @@ const Jurnal = () => {
         <div className="second__wrap">
           <div className="second__info">
             <div className="second__top">
-              <h3 className="second__title">Muloqot qilish</h3>
+              <h3 className="second__title">{t("score.sciences.communic")}</h3>
               {student?.user?.scores?.map((e) =>
                 e.skill === "COMMUNICATION" && e.createdAt === lastElement
                   ? e?.scores.forEach((number) => {
@@ -226,11 +228,11 @@ const Jurnal = () => {
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">Fikrlarini</li>
-              <li className="point__item">Aktiv</li>
-              <li className="point__item">Og’zaki</li>
-              <li className="point__item">Auditoriyani</li>
-              <li className="point__item">Jamoaviy</li>
+              <li className="point__item">{t("table.think")}</li>
+              <li className="point__item">{t("table.active")}</li>
+              <li className="point__item">{t("table.oral")}</li>
+              <li className="point__item">{t("table.audit")}</li>
+              <li className="point__item">{t("table.grup")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>
@@ -245,7 +247,7 @@ const Jurnal = () => {
 
           <div className="second__info">
             <div className="second__top">
-              <h3 className="second__title">Tanqidiy fikrlash</h3>
+              <h3 className="second__title">{t("score.sciences.critic")}</h3>
               <span className="visually-hidden">{(sum = 0)}</span>
               {student?.user?.scores?.map((e) =>
                 e.skill === "CRITICAL_THINKING" && e.createdAt === lastElement
@@ -260,11 +262,11 @@ const Jurnal = () => {
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">Fikrlarini</li>
-              <li className="point__item">Aktiv</li>
-              <li className="point__item">Og’zaki</li>
-              <li className="point__item">Auditoriyani</li>
-              <li className="point__item">Jamoaviy</li>
+              <li className="point__item">{t("table.think")}</li>
+              <li className="point__item">{t("table.active")}</li>
+              <li className="point__item">{t("table.oral")}</li>
+              <li className="point__item">{t("table.audit")}</li>
+              <li className="point__item">{t("table.grup")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>
@@ -280,7 +282,7 @@ const Jurnal = () => {
 
           <div className="second__info">
             <div className="second__top">
-              <h3 className="second__title">Muammoni hal qilish</h3>
+              <h3 className="second__title">{t("score.sciences.problem")}</h3>
               <span className="visually-hidden">{(sum = 0)}</span>
               {student?.user?.scores?.map((e) =>
                 e.skill === "PROBLEM_SOLVING" && e.createdAt === lastElement
@@ -295,11 +297,11 @@ const Jurnal = () => {
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">Fikrlarini</li>
-              <li className="point__item">Aktiv</li>
-              <li className="point__item">Og’zaki</li>
-              <li className="point__item">Auditoriyani</li>
-              <li className="point__item">Jamoaviy</li>
+              <li className="point__item">{t("table.think")}</li>
+              <li className="point__item">{t("table.active")}</li>
+              <li className="point__item">{t("table.oral")}</li>
+              <li className="point__item">{t("table.audit")}</li>
+              <li className="point__item">{t("table.grup")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>
@@ -315,7 +317,7 @@ const Jurnal = () => {
 
           <div className="second__info">
             <div className="second__top">
-              <h3 className="second__title">Muammoni hal qilish</h3>
+              <h3 className="second__title">{t("score.sciences.solution")}</h3>
               <span className="visually-hidden">{(sum = 0)}</span>
               {student?.user?.scores?.map((e) =>
                 e.skill === "IMPLEMENTATION" && e.createdAt === lastElement
@@ -330,11 +332,11 @@ const Jurnal = () => {
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">Fikrlarini</li>
-              <li className="point__item">Aktiv</li>
-              <li className="point__item">Og’zaki</li>
-              <li className="point__item">Auditoriyani</li>
-              <li className="point__item">Jamoaviy</li>
+              <li className="point__item">{t("table.think")}</li>
+              <li className="point__item">{t("table.active")}</li>
+              <li className="point__item">{t("table.oral")}</li>
+              <li className="point__item">{t("table.audit")}</li>
+              <li className="point__item">{t("table.grup")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>
@@ -350,7 +352,7 @@ const Jurnal = () => {
 
           <div className="second__info">
             <div className="second__top">
-              <h3 className="second__title">Muammoni hal qilish</h3>
+              <h3 className="second__title">{t("score.sciences.stress")}</h3>
               <span className="visually-hidden">{(sum = 0)}</span>
               {student?.user?.scores?.map((e) =>
                 e.skill === "STRESS_REACTIVITY" && e.createdAt === lastElement
@@ -365,11 +367,11 @@ const Jurnal = () => {
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">Fikrlarini</li>
-              <li className="point__item">Aktiv</li>
-              <li className="point__item">Og’zaki</li>
-              <li className="point__item">Auditoriyani</li>
-              <li className="point__item">Jamoaviy</li>
+              <li className="point__item">{t("table.think")}</li>
+              <li className="point__item">{t("table.active")}</li>
+              <li className="point__item">{t("table.oral")}</li>
+              <li className="point__item">{t("table.audit")}</li>
+              <li className="point__item">{t("table.grup")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>
@@ -400,7 +402,7 @@ const Jurnal = () => {
             setAddModal(true);
           }}
         >
-          Evaluation
+          {t("table.rent")}
         </button>
       </div>
     </div>

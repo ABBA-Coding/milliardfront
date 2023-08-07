@@ -3,12 +3,15 @@ import { ScrollerBtn } from "./ScrollerBtn";
 import { ItemList } from "./ItemList";
 import Std3 from "../../assets/images/icons/student3.png";
 import { GetElementServices } from "../../services/AxiosGenerator";
+import { useTranslation } from "react-i18next";
 
 export const Table = () => {
+  const { t, i18n } = useTranslation();
+  // console.log(i18n.language);
   const [classId, setClassId] = useState("");
   const [room, setRoom] = useState();
   const [students, setStudents] = useState();
-  console.log(students);
+  // console.log(students);
   const StudentVal =
     students?.students || students?.users || students
       ? students?.students || students?.users || students
@@ -61,7 +64,7 @@ export const Table = () => {
             }}
             defaultValue={""}
           >
-            <option value={""}>All Students</option>
+            <option value={""}>{t("table.student")}</option>
             {room?.classes?.map((item) => (
               <option key={item.id} value={item.id}>
                 {item.name} sinfi
@@ -82,7 +85,8 @@ export const Table = () => {
           </ul>
 
           <p className="info__text">
-            Umumiy o’quvchilar soni {StudentVal?.length} ta
+            {t("table.total")} {StudentVal?.length}{" "}
+            {i18n?.language === "uz" ? "nafar" : ""}
           </p>
         </div>
       </div>

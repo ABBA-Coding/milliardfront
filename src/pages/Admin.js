@@ -5,6 +5,7 @@ import { StudentTable } from "../components/StudentTable/StudentTable";
 import { TeacherTable } from "../components/TeacherTable/TeacherTable";
 import { AdminTable } from "../components/AdminTable/AdminTable";
 import { SettingTable } from "../components/SettingTable/SettingTable";
+import { ClassTable } from "../components/ClassTable/Classtable";
 // import useZustand from "../context/CreateZustand";
 
 export const Admin = () => {
@@ -19,6 +20,7 @@ export const Admin = () => {
             <Route index element={<AdminTable />} />
             <Route path="/class" element={<TeacherTable />} />
             <Route path="/student" element={<StudentTable />} />
+            <Route path="/classes" element={<ClassTable />} />
             <Route path="/settings" element={<SettingTable />} />
           </Routes>
         </div>
