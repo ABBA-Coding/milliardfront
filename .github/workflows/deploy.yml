@@ -1,0 +1,39 @@
+name: Production deploy Milliardkids
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: GIT pulling from github repository
+      uses: appleboy/scp-action@master
+      with:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.KEY }}
+        source: "."
+        target: "/home/user/frontend/milliardkids"
+
+    - name: Command using from script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.KEY }}
+        script_stop: true
+        script: |
+          git --work-tree=/home/user/frontend/milliardkids --git-dir=/home/user/frontend/milliardkids/.git clean -f .
+          yarn --cwd /home/user/frontend/milliardkids
+          yarn --cwd /home/user/frontend/milliardkids run build
+          cp -r /home/user/frontend/milliardkids/build/* /var/www/milliard.itlink.uz/
+          sh /home/devops/deploy.sh "${{ github.event.head_commit.message }}" "MilliardKids Front"
