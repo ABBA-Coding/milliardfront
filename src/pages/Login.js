@@ -13,7 +13,7 @@ export const Login = () => {
       password: "",
     },
     onSubmit: (values) => {
-      console.log(values.email, values.password);
+      // console.log(values.email, values.password);
       axios
         .post("https://milliardapi.itlink.uz/auth/login", {
           email: values.email,
