@@ -79,14 +79,14 @@ export const StudentTable = () => {
             className="studenttable__select studenttable__select--second"
             onClick={() => setAddModal(true)}
           >
-            Add Student
+            Add student
           </button>
         )}
         <button
           className="studenttable__select studenttable__select--first"
           onClick={GetHandleStudent}
         >
-          All Studrnts
+          All studrnts
         </button>
 
         <label className="studenttable__label">
@@ -95,7 +95,7 @@ export const StudentTable = () => {
             className="studenttable__search"
             type="search"
             name="search"
-            placeholder="Search Student"
+            placeholder="Search for student"
           />
         </label>
 
@@ -144,9 +144,9 @@ export const StudentTable = () => {
 
       <div className="studenttable__main ">
         <div className="table__top top">
-          <span className="top__text">image</span>
-          <span className="top__text">Email</span>
-          <span className="top__text top__text--student">FullName</span>
+          <span className="top__text">Image</span>
+          <span className="top__text">E-mail</span>
+          <span className="top__text top__text--student">Full name</span>
           <span className="top__text">{btn}</span>
           <span className="top__text">Edit</span>
           <span className="top__text">Delete</span>

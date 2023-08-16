@@ -63,7 +63,7 @@ export const AdminTable = () => {
           className="studenttable__select studenttable__select--second"
           onClick={() => openModal()}
         >
-          Add Admin
+          Add admin
         </button>
 
         <label className="studenttable__label">
@@ -72,7 +72,7 @@ export const AdminTable = () => {
             className="studenttable__search"
             type="search"
             name="search"
-            placeholder="Search Admin"
+            placeholder="Search for admin"
           />
         </label>
       </div>
@@ -95,8 +95,8 @@ export const AdminTable = () => {
 
       <div className="studenttable__main">
         <div className="table__top top">
-          <span className="top__text top__text--another">Email</span>
-          <span className="top__text">FullName</span>
+          <span className="top__text top__text--another">E-mail</span>
+          <span className="top__text">Full name</span>
           <span className="top__text">Username</span>
           <span className="top__text">Delete</span>
         </div>

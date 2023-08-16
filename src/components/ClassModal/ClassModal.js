@@ -1,14 +1,10 @@
-import React, { useRef, useState } from "react";
-import axios from "axios";
+import React, { useRef } from "react";
 import { NameSchema } from "../LoginSchema/LoginShema";
 import { useFormik } from "formik";
 import { postIlementServices } from "../../services/AxiosGenerator";
 
 export const ClassModal = ({ IsOpen }) => {
-  // const [data, setData] = useState();
-  const token = localStorage.getItem("token");
   const values = useRef();
-
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -18,15 +14,13 @@ export const ClassModal = ({ IsOpen }) => {
         name: values.name,
       });
       IsOpen(false);
-      // window.location.reload(false);
     },
-
     validationSchema: NameSchema,
   });
 
   return (
     <form className="classmodal" onSubmit={formik.handleSubmit}>
-      <label htmlFor="class">Add new Class</label>
+      <label htmlFor="class">Add new group</label>
       {formik.touched.name && formik.errors.name ? (
         <span>{formik.errors.name}</span>
       ) : (

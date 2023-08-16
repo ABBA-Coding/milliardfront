@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AddImg from "../../assets/images/icons/add-imag.jpg";
 import { GetElementServices } from "../../services/AxiosGenerator";
 
 export const SettingTable = () => {
@@ -51,7 +50,7 @@ export const SettingTable = () => {
       .catch((err) => console.log(err));
   };
 
-  // get frist img
+  // get second img
   const getSecondImg = (evt) => {
     evt.preventDefault();
     const formData = new FormData();
@@ -185,7 +184,7 @@ export const SettingTable = () => {
               </div>
 
               <div className="form__right">
-                <h4 className="inner__title">Times</h4>
+                <h4 className="inner__title">Time</h4>
                 <input
                   ref={dataFive}
                   name="five"
@@ -220,7 +219,7 @@ export const SettingTable = () => {
         <div className="settings__right right">
           <div className="right__top">
             <form className="form__one one" onSubmit={getFirstImg}>
-              <h3 className="one__title">For parent home page</h3>
+              <h3 className="one__title">For parents homepage</h3>
               <label className="one__label">
                 <input
                   ref={studentImg}
@@ -230,9 +229,7 @@ export const SettingTable = () => {
                 />
                 <span className="one__span">
                   <img
-                    src={
-                      `https://milliardapi.itlink.uz/${studentImages}` || AddImg
-                    }
+                    src={`https://milliardapi.itlink.uz/${meta?.studentImg}`}
                     alt="add img"
                   />
                 </span>
@@ -243,7 +240,7 @@ export const SettingTable = () => {
             </form>
 
             <form className="form__one one" onSubmit={getSecondImg}>
-              <h3 className="one__title">For teachers home page</h3>
+              <h3 className="one__title">For teachers homepage</h3>
               <label className="one__label">
                 <input
                   ref={teacerImg}
@@ -253,9 +250,7 @@ export const SettingTable = () => {
                 />
                 <span className="one__span">
                   <img
-                    src={
-                      `https://milliardapi.itlink.uz/${teacherImages}` || AddImg
-                    }
+                    src={`https://milliardapi.itlink.uz/${meta?.teacherImg}`}
                     alt="add img"
                   />
                 </span>

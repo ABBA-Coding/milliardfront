@@ -55,11 +55,11 @@ export const Footer = () => {
               <div className="right__cover">
                 <strong className="right__title ">{t("footer.main")}</strong>
                 <ul className="right__list">
-                  <li className="right__item">
+                  {/* <li className="right__item">
                     <a className="right__link" href="#/">
                       {t("footer.accaunt")}
                     </a>
-                  </li>
+                  </li> */}
                   <li className="right__item">
                     <Link className="right__link" to="/login">
                       Login
@@ -79,15 +79,6 @@ export const Footer = () => {
                   <li className="right__item">
                     <a className="right__link" href="#/">
                       Returns & Refunds
-                    </a>
-                  </li>
-                  <li className="right__item">
-                    <a
-                      className="right__link"
-                      href="https://linktr.ee/milliardkidz?utm_source=linktree_profile_share&ltsid=42cc7d68-7fdf-4d2b-8645-ef4e726c8c8a"
-                      target="blank"
-                    >
-                      Linktr
                     </a>
                   </li>
                 </ul>

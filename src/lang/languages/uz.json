@@ -3,28 +3,28 @@
     "nav": {
       "main": "Asosiy",
       "score": "Hisob",
-      "table": "Vaqt jadvali",
-      "contact": "Aloqa",
+      "table": "Dars vaqti ",
+      "contact": "Aloqa uchun",
       "registr": "Ro'yxatdan o'tish",
       "sign": "Kirish",
       "journal": "Jurnal",
-      "tablet": "Tablitsa",
+      "tablet": "Jadval",
       "reyting": "Reyting"
     }
   },
   "main": {
-    "teacher": "Ustozlar",
-    "parent": "ota-onalar"
+    "teacher": "Ustozlar sahifasi",
+    "parent": "ota-onalar sahifasi"
   },
   "footer": {
-    "main": "Asosan",
-    "contact": "Aloqa",
+    "main": "Asosiy",
+    "contact": "Aloqa uchun",
     "accaunt": "Mening hisobim"
   },
   "score": {
     "main": {
       "grades": "Baholar",
-      "date": "Sanani tanlang",
+      "date": "Guruhni tanlang",
       "bussines": "Biznesni davolash"
     },
     "sciences": {
@@ -42,15 +42,15 @@
       "group": "Guruh muloqotida faol ishtirok etadi"
     },
     "schedual": {
-      "time": "Vaqt jadvalini rejalashtirish",
+      "time": "Dars vaqtini rejalashtirish",
       "pick": "Vaqtni tanlang",
-      "class": "Sinf rahbari"
+      "class": "Guruh rahbari"
     }
   },
   "table": {
-    "student": "Barcha o‘quvchilar",
-    "total": "O‘quvchilarning umumiy soni",
-    "date": "sana",
+    "student": "Barcha o'quvchilar",
+    "total": "O‘quvchilarning umumiy soni:",
+    "date": "Sana",
     "rent": "Baholash",
     "think": "Fikrlar",
     "active": "Faol",
@@ -59,8 +59,8 @@
     "grup": "Jamoaviy"
   },
   "reyting": {
-    "choose": "Sinfni tanlang",
-    "general": "Umumiy o’quvchilar",
+    "choose": "Guruhni tanlang",
+    "general": "Barcha o'quvchilar",
     "gold": "Oltin",
     "silver": "Kumush",
     "bronze": "Bronza"

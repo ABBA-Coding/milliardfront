@@ -10,24 +10,32 @@
     .global__title {
       color: $dark;
       font-family: Manrope;
-      font-size: 96px;
+      font-size: 70px;
       font-style: normal;
       font-weight: 800;
       line-height: normal;
       text-transform: uppercase;
       position: absolute;
-      top: 140px;
-      left: 15%;
+      top: 145px;
+      left: 7%;
 
       @include media-max(800px) {
-        font-size: 48.613px;
+        font-size: 42px;
         left: 5%;
       }
 
-      @include media-max(500px) {
+      @include media-max(700px) {
         font-size: 36px;
         top: 20px;
         left: 22%;
+      }
+      @include media-max(500px) {
+        font-size: 30px;
+        left: 15%;
+      }
+      @include media-max(400px) {
+        font-size: 25px;
+        left: 12%;
       }
     }
 
@@ -98,16 +106,17 @@
     position: relative;
 
     .global__title {
+      width: 400px;
       color: $dark;
       font-family: Manrope;
-      font-size: 96px;
+      font-size: 50px;
       font-style: normal;
       font-weight: 800;
       line-height: normal;
       text-transform: uppercase;
       position: absolute;
       top: 330px;
-      left: 1%;
+      left: 5%;
 
       @include media-max(1050px) {
         font-size: 48.613px;
@@ -116,9 +125,22 @@
       }
 
       @include media-max(680px) {
-        font-size: 36px;
+        width: auto;
+
+        font-size: 32px;
         top: 20px;
-        left: 25%;
+        left: 15%;
+      }
+
+      @include media-max(500px) {
+        font-size: 26px;
+        top: 20px;
+        left: 14%;
+      }
+      @include media-max(400px) {
+        font-size: 24px;
+        top: 20px;
+        left: 10%;
       }
     }
 

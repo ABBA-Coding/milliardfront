@@ -43,10 +43,19 @@ export const AditionModal = ({ role }) => {
     validationSchema: RegisterSchema,
   });
 
+  let title;
+  if (role === "ADMIN") {
+    title = "Admin";
+  } else if (role === "USER") {
+    title = "User";
+  } else if (role === "TEACHER") {
+    title = "Teacher";
+  }
+
   return (
     <form className="login__form" onSubmit={formik.handleSubmit}>
       <div className="form-group">
-        <label htmlFor="username">{role} Name:</label>
+        <label htmlFor="username">{title} username:</label>
         <input
           name="username"
           className="login__input"
@@ -64,7 +73,7 @@ export const AditionModal = ({ role }) => {
         )}
       </div>
       <div className="form-group">
-        <label htmlFor="fullname">Full Name:</label>
+        <label htmlFor="fullname">Full name:</label>
         <input
           name="fullname"
           className="login__input"
@@ -73,7 +82,7 @@ export const AditionModal = ({ role }) => {
           value={formik.values.fullname}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          placeholder="enter your fullname"
+          placeholder="enter your full name"
         />
         {formik.touched.fullname && formik.errors.fullname ? (
           <span>{formik.errors.fullname}</span>
@@ -82,7 +91,7 @@ export const AditionModal = ({ role }) => {
         )}
       </div>
       <div className="form-group">
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email">E-mail:</label>
         <input
           name="email"
           className="login__input"

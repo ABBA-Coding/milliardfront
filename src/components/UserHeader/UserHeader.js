@@ -85,7 +85,7 @@ export const UserHeader = () => {
                   </Tippy>
                 </li>
               </ul>
-              <Tippy animation="fade" content="languages">
+              <Tippy animation="fade" content="Tilni tanlang">
                 <select
                   className="nav__select"
                   defaultValue={i18n.language}
@@ -98,7 +98,7 @@ export const UserHeader = () => {
                     English
                   </option>
                   <option className="nav__option" value="uz">
-                    Uzbek
+                    O'zbek
                   </option>
                 </select>
               </Tippy>

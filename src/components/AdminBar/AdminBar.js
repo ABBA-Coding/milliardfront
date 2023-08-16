@@ -48,7 +48,7 @@ export const AdminBar = () => {
           navigate("/login");
         }}
       >
-        Log OUT
+        Log out
       </button>
     </div>
   );

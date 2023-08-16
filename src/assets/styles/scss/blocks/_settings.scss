@@ -3,8 +3,14 @@
   .settings__inner {
     display: flex;
     justify-content: space-between;
+    @include media-max(1500px) {
+      flex-direction: column;
+    }
   }
   .setting__left {
+    @include media-max(1500px) {
+      margin-bottom: 30px;
+    }
     .left__form {
       // width: 100%;
       width: 580px;
@@ -132,6 +138,15 @@
     }
 
     .one__span {
+      display: inline-block;
+      width: 200px;
+      height: 125px;
+      background-image: url(../../images/icons/plImg.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      border-radius: 8px;
+      background-color: #d8dbdf;
       img {
         width: 200px;
         height: 125px;

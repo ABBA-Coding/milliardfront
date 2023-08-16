@@ -34,7 +34,7 @@ export const EventCard = () => {
         </div>
         <div className="event__menber menber">
           <div className="menber__time time">
-            <div className="time__data">
+            {/* <div className="time__data">
               <span className="time__day">
                 Any <span>Date</span>
               </span>
@@ -44,7 +44,7 @@ export const EventCard = () => {
               <span className="time__day">
                 45 Minutes <span>Duration</span>
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
