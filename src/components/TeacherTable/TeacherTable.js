@@ -8,6 +8,7 @@ import {
 } from "../../services/AxiosGenerator";
 import { DeleteModal } from "../DeleteModal/DeleteModal";
 import { EditModalComponent } from "../EditModal/EditModal";
+import { NavLink, useNavigate } from "react-router-dom";
 Modal.setAppElement("#root");
 
 export const TeacherTable = () => {
@@ -21,7 +22,7 @@ export const TeacherTable = () => {
   const StudentVal =
     teachers?.users || teachers ? teachers?.users || teachers : teachers?.users;
 
-  console.log(teachers);
+  const navigate = useNavigate();
 
   function openModal() {
     setIsOpen(true);
@@ -85,7 +86,7 @@ export const TeacherTable = () => {
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <AditionModal role={"TEACHER"} />
+        <AditionModal role={"TEACHER"} Open={closeModal} />
       </Modal>
 
       <Modal
@@ -101,21 +102,83 @@ export const TeacherTable = () => {
         onRequestClose={() => setEditModal(false)}
         style={customStyles}
       >
-        <EditModalComponent edId={editId} />
+        <EditModalComponent edId={editId} Open={setEditModal} />
       </Modal>
 
+      <div className="admin__nav">
+        <div className="adminbar__list">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/"
+          >
+            Admins
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/class"
+          >
+            Teachers
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/student"
+          >
+            Students
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/classes"
+          >
+            Classes
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/settings"
+          >
+            Settings
+          </NavLink>
+          <button
+            className={"adminbar__link adminbar__link--log"}
+            onClick={() => {
+              localStorage.removeItem("token");
+              navigate("/login");
+            }}
+          >
+            Log out
+          </button>
+        </div>
+      </div>
+
       <div className="studenttable__main">
-        <div className="table__top top">
+        {/* <div className="table__top top">
           <span className="top__text top__text--teacher">E-mail</span>
           <span className="top__text ">Full name</span>
           <span className="top__text">Username</span>
           <span className="top__text top__text--admin">Class</span>
           <span className="top__text">Edit</span>
           <span className="top__text">Delete</span>
-        </div>
-        <ul className="table__list">
+        </div> */}
+        <div className="table__list">
+          <div className="table__top top">
+            <span className="top__text top__text--teacher">E-mail</span>
+            <span className="top__text top__text--full">Full name</span>
+            <span className="top__text">Username</span>
+            <span className="top__text">Class</span>
+            <span className="top__text">Edit</span>
+            <span className="top__text">Delete</span>
+          </div>
           {StudentVal?.map((item) => (
-            <li className="table__item" key={item.id}>
+            <div className="table__item" key={item.id}>
               <span className="table__span table__span--first">
                 {item.email}
               </span>
@@ -146,9 +209,9 @@ export const TeacherTable = () => {
               >
                 <DeleteIcon />
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

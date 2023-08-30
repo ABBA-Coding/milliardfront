@@ -13,8 +13,6 @@ const Jurnal = () => {
   const { id } = useParams();
   const [clock, setClock] = useState();
 
-  // console.log(student);
-
   const customStyles = {
     content: {
       width: "700px",
@@ -219,7 +217,6 @@ const Jurnal = () => {
                 e.skill === "COMMUNICATION" && e.createdAt === lastElement
                   ? e?.scores.forEach((number) => {
                       sum += number;
-                      // console.log(number);
                     })
                   : ""
               )}
@@ -253,7 +250,6 @@ const Jurnal = () => {
                 e.skill === "CRITICAL_THINKING" && e.createdAt === lastElement
                   ? e?.scores.forEach((number) => {
                       sum += number;
-                      // console.log(number);
                     })
                   : ""
               )}
@@ -288,7 +284,6 @@ const Jurnal = () => {
                 e.skill === "PROBLEM_SOLVING" && e.createdAt === lastElement
                   ? e?.scores.forEach((number) => {
                       sum += number;
-                      // console.log(number);
                     })
                   : ""
               )}
@@ -323,7 +318,6 @@ const Jurnal = () => {
                 e.skill === "IMPLEMENTATION" && e.createdAt === lastElement
                   ? e?.scores.forEach((number) => {
                       sum += number;
-                      // console.log(number);
                     })
                   : ""
               )}
@@ -358,7 +352,6 @@ const Jurnal = () => {
                 e.skill === "STRESS_REACTIVITY" && e.createdAt === lastElement
                   ? e?.scores.forEach((number) => {
                       sum += number;
-                      // console.log(number);
                     })
                   : ""
               )}

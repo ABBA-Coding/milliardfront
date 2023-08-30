@@ -4,6 +4,17 @@
   background-color: $white;
   border-radius: 10px;
 
+  @include media-max(500px) {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 45px 45px;
+  }
+
+  @include media-max(400px) {
+    max-width: 300px;
+    padding: 40px 20px;
+  }
+
   .delete__title {
     text-align: center;
     color: $dark;

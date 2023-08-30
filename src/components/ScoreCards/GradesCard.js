@@ -60,7 +60,6 @@ export const GradesCard = () => {
           e.createdAt === lastElement
             ? e?.scores.forEach((number) => {
                 sum += number;
-                // console.log(sum);
               })
             : ""
         )}

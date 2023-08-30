@@ -13,7 +13,6 @@ export const Login = () => {
       password: "",
     },
     onSubmit: (values) => {
-      // console.log(values.email, values.password);
       axios
         .post("https://milliardapi.itlink.uz/auth/login", {
           email: values.email,
@@ -39,12 +38,6 @@ export const Login = () => {
 
     validationSchema: LoginSchema,
   });
-
-  // const handleOtherButtonClick = (evt) => {
-  //   evt.preventDefault();
-  //   // Handle the other button click logic here
-  //   console.log("Other button clicked");
-  // };
 
   return (
     <div className="login">

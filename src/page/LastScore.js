@@ -34,8 +34,6 @@ export const LastScore = () => {
     title = t("score.sciences.stress");
   }
 
-  // console.log(students);
-
   useEffect(() => {
     GetElementServices(`student?id=${UserId}`, setStudents);
   }, [UserId]);
@@ -50,7 +48,6 @@ export const LastScore = () => {
             e.skill === param && e.createdAt === lastElement
               ? e?.scores.forEach((number) => {
                   sum += number;
-                  // console.log(sum);
                 })
               : ""
           )}

@@ -9,9 +9,11 @@ import { DeleteIcon, EditIcon } from "../../assets/images/img/img";
 import { StudentModal } from "../StudentModal/StudentModal";
 import { EditModalComponent } from "../EditModal/EditModal";
 import { DeleteModal } from "../DeleteModal/DeleteModal";
+import { NavLink, useNavigate } from "react-router-dom";
 Modal.setAppElement("#root");
 
 export const StudentTable = () => {
+  const navigate = useNavigate();
   const [room, setRoom] = useState();
   const [classId, setClassId] = useState("");
   const [Students, setStudents] = useState([]);
@@ -100,7 +102,7 @@ export const StudentTable = () => {
         </label>
 
         <select
-          className="studenttable__select"
+          className="studenttable__select studenttable__select--class"
           onChange={(e) => {
             setClassId(e.target.value);
             setBtn("Password");
@@ -120,7 +122,7 @@ export const StudentTable = () => {
         onRequestClose={() => setAddModal(false)}
         style={customStyles}
       >
-        <StudentModal role={"USER"} />
+        <StudentModal role={"USER"} Open={setAddModal} />
       </Modal>
 
       {/* editmodal */}
@@ -129,7 +131,7 @@ export const StudentTable = () => {
         onRequestClose={() => setEditModal(false)}
         style={customStyles}
       >
-        <EditModalComponent edId={editId} />
+        <EditModalComponent edId={editId} Open={setEditModal} />
       </Modal>
 
       {/* delete modal */}
@@ -142,18 +144,72 @@ export const StudentTable = () => {
         <DeleteModal edId={editId} isOpen={setDeleteModal} />
       </Modal>
 
-      <div className="studenttable__main ">
-        <div className="table__top top">
-          <span className="top__text">Image</span>
-          <span className="top__text">E-mail</span>
-          <span className="top__text top__text--student">Full name</span>
-          <span className="top__text">{btn}</span>
-          <span className="top__text">Edit</span>
-          <span className="top__text">Delete</span>
+      <div className="admin__nav">
+        <div className="adminbar__list">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/"
+          >
+            Admins
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/class"
+          >
+            Teachers
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/student"
+          >
+            Students
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/classes"
+          >
+            Classes
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/settings"
+          >
+            Settings
+          </NavLink>
+          <button
+            className={"adminbar__link adminbar__link--log"}
+            onClick={() => {
+              localStorage.removeItem("token");
+              navigate("/login");
+            }}
+          >
+            Log out
+          </button>
         </div>
-        <ul className="table__list">
+      </div>
+
+      <div className="studenttable__main ">
+        <div className="table__list">
+          <div className="table__top top">
+            <span className="top__text">Image</span>
+            <span className="top__text top__text--sone">E-mail</span>
+            <span className="top__text top__text--student">Full name</span>
+            <span className="top__text">{btn}</span>
+            <span className="top__text">Edit</span>
+            <span className="top__text">Delete</span>
+          </div>
           {StudentVal?.map((item) => (
-            <li className="table__item">
+            <div className="table__item">
               <img className="table__img" src={Man} alt="student" />
               <span className="table__span table__span--first">
                 {item.email}
@@ -161,7 +217,7 @@ export const StudentTable = () => {
               <span className="table__span table__span--two">
                 {item.fullname}
               </span>
-              <span className="table__span table__span--three">
+              <span className="table__span table__span--stwo">
                 {item.class?.name || item.password
                   ? item.class?.name || item.password
                   : item.class?.name}
@@ -184,9 +240,9 @@ export const StudentTable = () => {
               >
                 <DeleteIcon />
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
         {/* {btn === "Class" && (
           <button
             className="studenttable__send"

@@ -26,7 +26,6 @@ export const LastCard = () => {
       )
     );
   }, [students?.user?.scores]);
-  // console.log(dates);
   const lastElement = time ? time : dates[dates?.length - 1];
 
   return (
@@ -60,7 +59,6 @@ export const LastCard = () => {
           e.createdAt === lastElement
             ? e?.scores.forEach((number) => {
                 sum += number;
-                // console.log(sum);
               })
             : ""
         )}
@@ -137,7 +135,6 @@ export const LastCard = () => {
                       sum += number;
                     })}
                     {`${(sum = (sum / 25) * 100)}%`}
-                    {/* {console.log(sum)} */}
                   </span>
                 </Link>
               </li>
@@ -161,7 +158,6 @@ export const LastCard = () => {
                       sum += number;
                     })}
                     {`${(sum = (sum / 25) * 100)}%`}
-                    {/* {console.log(sum)} */}
                   </span>
                 </Link>
               </li>
@@ -185,7 +181,6 @@ export const LastCard = () => {
                       sum += number;
                     })}
                     {`${(sum = (sum / 25) * 100)}%`}
-                    {/* {console.log(sum)} */}
                   </span>
                 </Link>
               </li>

@@ -64,9 +64,7 @@ export const Registr = () => {
                 ref={selectValue}
                 className="login__input"
                 defaultValue={""}
-                // onChange={console.log(selectValue.cu)}
                 onChange={formik.handleChange}
-                // onBlur={formik.handleBlur}
               >
                 <option className="login__option" value="">
                   choose category

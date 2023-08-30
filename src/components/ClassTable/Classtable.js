@@ -4,16 +4,15 @@ import Modal from "react-modal";
 import { ClassModal } from "../ClassModal/ClassModal";
 import { DeleteIcon } from "../../assets/images/img/img";
 import { DeleteClass } from "../DeleteClass/DeleteClass";
+import { NavLink, useNavigate } from "react-router-dom";
 Modal.setAppElement("#root");
 
 export const ClassTable = () => {
+  const navigate = useNavigate();
   const [room, setRoom] = useState();
   const [editId, setEditId] = useState("");
-
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [deleteModal, setDeleteModal] = React.useState(false);
-
-  console.log(room);
 
   // Modal
   function openModal() {
@@ -74,15 +73,69 @@ export const ClassTable = () => {
         <DeleteClass edId={editId} isOpen={setDeleteModal} />
       </Modal>
 
-      <div className="studenttable__main ">
-        <div className="table__top classing top">
-          <span className="top__text top__text--classing">Name</span>
-          <span className="top__text top__text--classing">Students</span>
-          <span className="top__text top__text--classing">Delete</span>
+      <div className="admin__nav">
+        <div className="adminbar__list">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/"
+          >
+            Admins
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/class"
+          >
+            Teachers
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/student"
+          >
+            Students
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/classes"
+          >
+            Classes
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/settings"
+          >
+            Settings
+          </NavLink>
+          <button
+            className={"adminbar__link adminbar__link--log"}
+            onClick={() => {
+              localStorage.removeItem("token");
+              navigate("/login");
+            }}
+          >
+            Log out
+          </button>
         </div>
-        <ul className="table__list ">
+      </div>
+
+      <div className="studenttable__main ">
+        <div className="table__list ">
+          <div className="table__top classing top">
+            <span className="top__text top__text--classing">Name</span>
+            <span className="top__text top__text--classing">Students</span>
+            <span className="top__text top__text--classing">Delete</span>
+          </div>
           {room?.classes?.map((item) => (
-            <li className="table__item table__item--newitem">
+            <div key={item?.id} className="table__item table__item--newitem">
               <span className="table__span">{item.name}</span>
 
               <span className="table__span">
@@ -98,9 +151,9 @@ export const ClassTable = () => {
               >
                 <DeleteIcon />
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

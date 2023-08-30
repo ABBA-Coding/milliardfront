@@ -7,12 +7,6 @@ export const editElementServices = async (info, id, data) => {
   return response.data;
 };
 
-// export const editDatatServices = async (info) => {
-//   const response = await axiosServices.put(`/${info}`);
-//   console.log(response.data);
-//   return response.data;
-// };
-
 // post item
 
 export const postElementServices = async (info, data) => {

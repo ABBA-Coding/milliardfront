@@ -1,10 +1,14 @@
 .settings {
   padding-top: 90px;
+  @include media-max(1500px) {
+    padding-top: 0;
+  }
   .settings__inner {
     display: flex;
     justify-content: space-between;
     @include media-max(1500px) {
       flex-direction: column;
+      align-items: center;
     }
   }
   .setting__left {
@@ -12,8 +16,8 @@
       margin-bottom: 30px;
     }
     .left__form {
-      // width: 100%;
-      width: 580px;
+      width: 100%;
+      max-width: 580px;
       padding: 20px;
       background-color: $white;
       border-radius: 10px;
@@ -35,11 +39,19 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      @include media-max(400px) {
+        flex-direction: column;
+      }
     }
 
     .form__left {
       width: 100%;
       max-width: 260px;
+      margin-right: 20px;
+      @include media-max(400px) {
+        margin-right: 0px;
+        margin-bottom: 20px;
+      }
     }
 
     .form__right {
@@ -56,6 +68,9 @@
       font-weight: 700;
       line-height: normal;
       margin-bottom: 20px;
+      @include media-max(400px) {
+        margin-bottom: 14px;
+      }
     }
 
     .form__input {
@@ -114,12 +129,20 @@
       display: flex;
       justify-content: space-evenly;
       margin-bottom: 20px;
+      @include media-max(540px) {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 00px;
+      }
     }
 
     .form__one {
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include media-max(540px) {
+        margin-bottom: 30px;
+      }
     }
 
     .one__title {
@@ -131,6 +154,9 @@
       font-weight: 600;
       line-height: normal;
       margin-bottom: 20px;
+      @include media-max(540px) {
+        margin-bottom: 16px;
+      }
     }
 
     .one__label {

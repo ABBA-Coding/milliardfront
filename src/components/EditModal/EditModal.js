@@ -3,8 +3,9 @@ import axios from "axios";
 import { ClassSchema } from "../LoginSchema/LoginShema";
 import { useEffect, useRef, useState } from "react";
 import { GetElementServices } from "../../services/AxiosGenerator";
+import { ExitIcon } from "../../assets/images/img/img";
 
-export const EditModalComponent = ({ edId }) => {
+export const EditModalComponent = ({ edId, Open }) => {
   const token = localStorage.getItem("token");
   const [room, setRoom] = useState("");
   const selectValue = useRef();
@@ -27,7 +28,7 @@ export const EditModalComponent = ({ edId }) => {
           }
         )
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           if (data.status === 200) {
             // IsOpen(false);
             window.location.reload(false);
@@ -46,6 +47,9 @@ export const EditModalComponent = ({ edId }) => {
 
   return (
     <form className="login__form" onSubmit={formik.handleSubmit}>
+      <button className="exit_btn" onClick={() => Open(false)}>
+        <ExitIcon />
+      </button>
       <div className="form-group">
         <label style={{ marginBottom: "20px" }} htmlFor="username">
           Which class

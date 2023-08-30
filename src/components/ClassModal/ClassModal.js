@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { NameSchema } from "../LoginSchema/LoginShema";
 import { useFormik } from "formik";
 import { postIlementServices } from "../../services/AxiosGenerator";
+import { ExitIcon } from "../../assets/images/img/img";
 
 export const ClassModal = ({ IsOpen }) => {
   const values = useRef();
@@ -20,6 +21,9 @@ export const ClassModal = ({ IsOpen }) => {
 
   return (
     <form className="classmodal" onSubmit={formik.handleSubmit}>
+      <button className="exit_btn" onClick={() => IsOpen(false)}>
+        <ExitIcon />
+      </button>
       <label htmlFor="class">Add new group</label>
       {formik.touched.name && formik.errors.name ? (
         <span>{formik.errors.name}</span>

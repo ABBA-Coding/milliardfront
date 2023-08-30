@@ -1991,6 +1991,20 @@ ul {
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 10px;
+  position: relative;
+}
+@media only screen and (max-width: 500px) {
+  .login__form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .login__form {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 .login__form .form-group {
   display: flex;
@@ -2007,6 +2021,11 @@ ul {
   width: 330px;
   font-size: 14px;
 }
+@media only screen and (max-width: 500px) {
+  .login__form .form-group .login__input {
+    width: 250px;
+  }
+}
 .login__form .form-group span {
   color: #e80303;
   font-family: Manrope;
@@ -2022,6 +2041,15 @@ ul {
   border: none;
   border-radius: 4px;
   font-size: 14px;
+  cursor: pointer;
+}
+.login__form .exit_btn {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  border: none;
+  padding: 0;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -2106,6 +2134,11 @@ ul {
   border-radius: 0px 24px 24px 0px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+@media only screen and (max-width: 1440px) {
+  .admin .adminbar {
+    display: none;
+  }
+}
 .admin .adminbar .adminbar__img {
   display: flex;
   width: 79px;
@@ -2182,18 +2215,105 @@ ul {
 .admin .adminbar .adminbar__Links {
   margin-top: 70px;
 }
+.admin .admin__nav {
+  margin-bottom: 56px;
+}
+.admin .admin__nav ::-webkit-scrollbar {
+  height: 2px !important;
+}
+.admin .admin__nav ::-webkit-scrollbar-thumb {
+  background: rgba(24, 140, 229, 0.3843137255);
+}
+@media only screen and (min-width: 1440px) {
+  .admin .admin__nav {
+    display: none;
+  }
+}
+.admin .admin__nav .adminbar__list {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 1440px) {
+  .admin .admin__nav .adminbar__list {
+    overflow-x: scroll;
+  }
+}
+.admin .admin__nav .adminbar__link {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 16px 22px;
+  border-radius: 8px;
+  margin-right: 8px;
+  border: 2px solid #e6e6e6;
+}
+@media only screen and (max-width: 600px) {
+  .admin .admin__nav .adminbar__link {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+.admin .admin__nav .active {
+  color: #ffffff;
+  background-color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 16px 22px;
+  border-radius: 8px;
+  margin-right: 8px;
+  border: 2px solid #e6e6e6;
+}
+@media only screen and (max-width: 600px) {
+  .admin .admin__nav .active {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+.admin .admin__nav .adminbar__link--log {
+  min-width: 120px;
+  height: 60px;
+  display: block;
+  color: #ffffff;
+  background-color: #188ce5;
+}
 .admin .admin__table {
   width: 100%;
   padding: 56px 32px 20px 32px;
 }
+@media only screen and (max-width: 500px) {
+  .admin .admin__table {
+    padding: 30px 15px 20px 15px;
+  }
+}
 .admin .studenttable {
   position: relative;
+}
+.admin .studenttable ::-webkit-scrollbar {
+  height: 2px !important;
+  overflow-x: hidden;
+}
+.admin .studenttable ::-webkit-scrollbar-thumb {
+  background: rgba(24, 140, 229, 0.3843137255);
 }
 .admin .studenttable .studenttable__top {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 56px;
+}
+.admin .studenttable .studenttable__top ::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 1440px) {
+  .admin .studenttable .studenttable__top {
+    margin-bottom: 24px;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
 }
 .admin .studenttable .studenttable__select {
   cursor: pointer;
@@ -2211,16 +2331,30 @@ ul {
 }
 .admin .studenttable .studenttable__select--first {
   width: 100%;
-  max-width: 150px;
+  min-width: 120px;
+  min-height: 44;
   padding: 12px 15px;
   margin-right: 25px;
 }
 .admin .studenttable .studenttable__select--second {
-  width: 150px;
+  min-width: 130px;
+  min-height: 44px;
+  max-width: 150px;
   padding: 12px 0px;
   border: none;
   color: #ffffff;
   background-color: #188ce5;
+}
+@media only screen and (max-width: 400px) {
+  .admin .studenttable .studenttable__select--second {
+    height: 40px;
+    width: 180px;
+  }
+}
+.admin .studenttable .studenttable__select--class {
+  margin-left: 25px;
+  max-width: 180px;
+  min-width: 150px;
 }
 .admin .studenttable .studenttable__label {
   position: relative;
@@ -2239,6 +2373,7 @@ ul {
 .admin .studenttable .studenttable__search {
   width: 100%;
   max-width: 400px;
+  min-width: 200px;
   padding: 12px 50px;
   border: none;
   border-radius: 12px;
@@ -2258,6 +2393,12 @@ ul {
   background-color: #188ce5;
   cursor: pointer;
 }
+.admin .studenttable .studenttable__main {
+  background-color: #ffffff;
+}
+.admin .studenttable .studenttable__main ::-webkit-scrollbar {
+  display: none;
+}
 .admin .studenttable .studenttable__main .table__top {
   padding: 23px 21px 14px 21px;
   background-color: #ffffff;
@@ -2276,46 +2417,76 @@ ul {
 .admin .studenttable .studenttable__main .table__top .top__text:nth-child(1) {
   margin-right: 40px;
 }
-.admin .studenttable .studenttable__main .table__top .top__text:nth-child(2) {
-  margin-right: 200px;
-}
 .admin .studenttable .studenttable__main .table__top .top__text:nth-child(3) {
-  margin-right: 180px;
+  min-width: 240px;
+  margin-right: 0px;
 }
 .admin .studenttable .studenttable__main .table__top .top__text:nth-child(4) {
-  width: 260px;
+  min-width: 160px;
   margin-right: 0px;
 }
 .admin .studenttable .studenttable__main .table__top .top__text:nth-child(5) {
   margin-right: 100px;
 }
+.admin .studenttable .studenttable__main .table__top .top__text:last-child {
+  margin-right: 10px;
+}
 .admin .studenttable .studenttable__main .table__top .top__text--student {
-  margin-right: 190px !important;
+  min-width: 255px !important;
 }
 .admin .studenttable .studenttable__main .table__top .top__text--teacher {
   margin-right: 0;
-  width: 200px;
+  min-width: 200px;
 }
 .admin .studenttable .studenttable__main .table__top .top__text--full {
-  width: 250px !important;
+  min-width: 250px !important;
 }
 .admin .studenttable .studenttable__main .table__top .top__text--admin {
   margin-right: 0;
-  width: 150px !important;
+  min-width: 150px !important;
 }
 .admin .studenttable .studenttable__main .table__top .top__text--another {
-  width: 310px !important;
+  min-width: 310px !important;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--width {
+  min-width: 260px !important;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--full {
+  min-width: 260px !important;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--edit {
+  min-width: 160px !important;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--sone {
+  min-width: 230px;
 }
 .admin .studenttable .studenttable__main .classing {
   justify-content: space-between;
   padding: 22px 140px;
 }
 .admin .studenttable .studenttable__main .classing .top__text--classing {
+  min-width: auto !important;
   margin: 0 !important;
+}
+@media only screen and (max-width: 700px) {
+  .admin .studenttable .studenttable__main .classing {
+    padding: 20px 60px !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .admin .studenttable .studenttable__main .classing {
+    padding: 20px 30px !important;
+  }
 }
 .admin .studenttable .studenttable__main .table__list {
   height: 500px;
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 1440px) {
+  .admin .studenttable .studenttable__main .table__list {
+    overflow-x: scroll;
+  }
 }
 .admin .studenttable .studenttable__main .table__item {
   padding: 9px 21px;
@@ -2325,11 +2496,11 @@ ul {
   border-bottom: 1px solid #dfdfdf;
 }
 .admin .studenttable .studenttable__main .table__item .table__img {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 100px;
   box-shadow: 0px 2.7589726448px 2.7589726448px 0px rgba(0, 0, 0, 0.1);
-  margin-right: 25px;
+  margin-right: 40px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span {
   display: inline-block;
@@ -2338,38 +2509,59 @@ ul {
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+  position: relative;
+}
+.admin .studenttable .studenttable__main .table__item .table__span::after {
+  content: "";
+  bottom: -16px;
+  position: absolute;
+  width: 100%;
+  height: 0.5px;
+  background-color: #dfdfdf;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--first {
-  width: 238px;
+  min-width: 238px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--another {
-  width: 350px;
+  min-width: 350px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--two {
-  width: 260px;
+  min-width: 260px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--name {
-  width: 263px;
+  min-width: 263px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--three {
-  width: 230px;
+  min-width: 230px;
   overflow-x: hidden;
   margin-right: 30px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--margin {
-  width: 250px;
+  min-width: 250px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--nam {
-  width: 267px;
+  min-width: 267px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--admin {
-  width: 150px;
+  min-width: 150px;
+}
+.admin .studenttable .studenttable__main .table__item .table__span--stwo {
+  min-width: 150px;
 }
 .admin .studenttable .studenttable__main .table__item .table__btn {
   border: none;
   padding: none;
   background-color: transparent;
   cursor: pointer;
+  position: relative;
+}
+.admin .studenttable .studenttable__main .table__item .table__btn::after {
+  content: "";
+  bottom: -9px;
+  position: absolute;
+  width: 100%;
+  height: 0.2px;
+  background-color: #dfdfdf;
 }
 .admin .studenttable .studenttable__main .table__item .table__btn svg {
   width: 20px;
@@ -2396,8 +2588,18 @@ ul {
 
 .table__item--newitem {
   width: 100%;
-  padding: 10px 140px !important;
+  padding: 9px 140px !important;
   justify-content: space-between !important;
+}
+@media only screen and (max-width: 700px) {
+  .table__item--newitem {
+    padding: 9px 60px !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .table__item--newitem {
+    padding: 9px 30px !important;
+  }
 }
 
 .classmodal {
@@ -2407,6 +2609,18 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+@media only screen and (max-width: 500px) {
+  .classmodal {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .classmodal {
+    max-width: 300px;
+  }
 }
 .classmodal label {
   display: block;
@@ -2427,6 +2641,16 @@ ul {
   background: #eeebeb;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 500px) {
+  .classmodal input {
+    max-width: 300px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .classmodal input {
+    max-width: 250px;
+  }
 }
 .classmodal span {
   display: inline-block;
@@ -2450,6 +2674,21 @@ ul {
   border: none;
   border-radius: 10px;
   background-color: #188ce5;
+}
+.classmodal .exit_btn {
+  width: 25px;
+  height: 25px;
+  top: 6px;
+  right: 6px;
+  position: absolute;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.classmodal .exit_btn svg {
+  width: 25px;
+  height: 25px;
 }
 
 .score {
@@ -3721,6 +3960,19 @@ ul {
   background-color: #ffffff;
   border-radius: 10px;
 }
+@media only screen and (max-width: 500px) {
+  .delete {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 45px 45px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .delete {
+    max-width: 300px;
+    padding: 40px 20px;
+  }
+}
 .delete .delete__title {
   text-align: center;
   color: #3d3d3d;
@@ -3758,6 +4010,11 @@ ul {
 .settings {
   padding-top: 90px;
 }
+@media only screen and (max-width: 1500px) {
+  .settings {
+    padding-top: 0;
+  }
+}
 .settings .settings__inner {
   display: flex;
   justify-content: space-between;
@@ -3765,6 +4022,7 @@ ul {
 @media only screen and (max-width: 1500px) {
   .settings .settings__inner {
     flex-direction: column;
+    align-items: center;
   }
 }
 @media only screen and (max-width: 1500px) {
@@ -3773,7 +4031,8 @@ ul {
   }
 }
 .settings .setting__left .left__form {
-  width: 580px;
+  width: 100%;
+  max-width: 580px;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -3794,9 +4053,21 @@ ul {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media only screen and (max-width: 400px) {
+  .settings .setting__left .form__inneer {
+    flex-direction: column;
+  }
+}
 .settings .setting__left .form__left {
   width: 100%;
   max-width: 260px;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 400px) {
+  .settings .setting__left .form__left {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
 }
 .settings .setting__left .form__right {
   width: 100%;
@@ -3811,6 +4082,11 @@ ul {
   font-weight: 700;
   line-height: normal;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 400px) {
+  .settings .setting__left .inner__title {
+    margin-bottom: 14px;
+  }
 }
 .settings .setting__left .form__input {
   width: 100%;
@@ -3866,10 +4142,22 @@ ul {
   justify-content: space-evenly;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 540px) {
+  .settings .settings__right .right__top {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+}
 .settings .settings__right .form__one {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .settings .settings__right .form__one {
+    margin-bottom: 30px;
+  }
 }
 .settings .settings__right .one__title {
   color: #3d3d3d;
@@ -3880,6 +4168,11 @@ ul {
   font-weight: 600;
   line-height: normal;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 540px) {
+  .settings .settings__right .one__title {
+    margin-bottom: 16px;
+  }
 }
 .settings .settings__right .one__label {
   margin-bottom: 15px;

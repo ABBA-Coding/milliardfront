@@ -7,11 +7,9 @@ import { useTranslation } from "react-i18next";
 
 export const Table = () => {
   const { t, i18n } = useTranslation();
-  // console.log(i18n.language);
   const [classId, setClassId] = useState("");
   const [room, setRoom] = useState();
   const [students, setStudents] = useState();
-  // console.log(students);
   const StudentVal =
     students?.students || students?.users || students
       ? students?.students || students?.users || students

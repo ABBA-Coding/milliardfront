@@ -1,8 +1,9 @@
 import { useFormik } from "formik";
 import axios from "axios";
 import { RegisterSchema } from "../LoginSchema/LoginShema";
+import { ExitIcon } from "../../assets/images/img/img";
 
-export const StudentModal = ({ role }) => {
+export const StudentModal = ({ role, Open }) => {
   const token = localStorage.getItem("token");
 
   const formik = useFormik({
@@ -46,6 +47,9 @@ export const StudentModal = ({ role }) => {
 
   return (
     <form className="login__form" onSubmit={formik.handleSubmit}>
+      <button className="exit_btn" onClick={() => Open(false)}>
+        <ExitIcon />
+      </button>
       <div className="form-group">
         <label htmlFor="username">{role} Name:</label>
         <input

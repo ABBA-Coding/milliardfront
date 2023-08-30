@@ -3,10 +3,11 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GetElementServices } from "../../services/AxiosGenerator";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const SettingTable = () => {
+  const navigate = useNavigate();
   const [meta, setMeta] = useState();
-  console.log(meta);
   const token = localStorage.getItem("token");
   const dataOne = useRef();
   const dataTwo = useRef();
@@ -38,7 +39,7 @@ export const SettingTable = () => {
         },
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.status === 200) {
           localStorage.setItem("studentImg", data?.data.image);
           toast.success("Uploaded successfully!");
@@ -63,7 +64,7 @@ export const SettingTable = () => {
         },
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.status === 200) {
           localStorage.setItem("teacherImg", data?.data.image);
           toast.success("Uploaded successfully!");
@@ -145,6 +146,59 @@ export const SettingTable = () => {
 
   return (
     <div className="settings">
+      <div className="admin__nav">
+        <div className="adminbar__list">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/"
+          >
+            Admins
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/class"
+          >
+            Teachers
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/student"
+          >
+            Students
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/classes"
+          >
+            Classes
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active" : "adminbar__link"
+            }
+            to="/settings"
+          >
+            Settings
+          </NavLink>
+          <button
+            className={"adminbar__link adminbar__link--log"}
+            onClick={() => {
+              localStorage.removeItem("token");
+              navigate("/login");
+            }}
+          >
+            Log out
+          </button>
+        </div>
+      </div>
       <div className="settings__inner">
         <div className="setting__left left">
           <form className="left__form form" onSubmit={handleSubmit}>

@@ -1,8 +1,9 @@
 import { useFormik } from "formik";
 import axios from "axios";
 import { RegisterSchema } from "../LoginSchema/LoginShema";
+import { ExitIcon } from "../../assets/images/img/img";
 
-export const AditionModal = ({ role }) => {
+export const AditionModal = ({ role, Open }) => {
   const token = localStorage.getItem("token");
   const formik = useFormik({
     initialValues: {
@@ -13,7 +14,6 @@ export const AditionModal = ({ role }) => {
       role: "",
     },
     onSubmit: (values) => {
-      console.log(values.username);
       axios
         .post(
           "https://milliardapi.itlink.uz/auth/register",
@@ -31,7 +31,7 @@ export const AditionModal = ({ role }) => {
           }
         )
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           if (data.status === 200) {
             // IsOpen(false);
             window.location.reload(false);
@@ -54,6 +54,9 @@ export const AditionModal = ({ role }) => {
 
   return (
     <form className="login__form" onSubmit={formik.handleSubmit}>
+      <button className="exit_btn" onClick={() => Open(true)}>
+        <ExitIcon />
+      </button>
       <div className="form-group">
         <label htmlFor="username">{title} username:</label>
         <input

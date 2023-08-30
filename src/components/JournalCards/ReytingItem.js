@@ -10,7 +10,6 @@ export const ReytingItem = ({ name, point, clas }) => {
     })
   );
 
-  // console.log(ClasCount);
   if (ClasCount > 350) {
     clas = "gold";
   }

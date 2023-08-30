@@ -15,6 +15,10 @@
     border-radius: 0px 24px 24px 0px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+    @include media-max {
+      display: none;
+    }
+
     .adminbar__img {
       display: flex;
 
@@ -104,18 +108,100 @@
     }
   }
 
+  .admin__nav {
+    margin-bottom: 56px;
+    ::-webkit-scrollbar {
+      height: 2px !important;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #188ce562;
+    }
+    @include media-min(1440px) {
+      display: none;
+    }
+
+    .adminbar__list {
+      display: flex;
+      align-items: center;
+      @include media-max(1440px) {
+        overflow-x: scroll;
+      }
+    }
+
+    .adminbar__link {
+      color: $black;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding: 16px 22px;
+      border-radius: 8px;
+      margin-right: 8px;
+      border: 2px solid #e6e6e6;
+
+      @include media-max(600px) {
+        font-size: 16px;
+        padding: 14px 20px;
+      }
+    }
+
+    .active {
+      color: $white;
+      background-color: $black;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding: 16px 22px;
+      border-radius: 8px;
+      margin-right: 8px;
+      border: 2px solid #e6e6e6;
+
+      @include media-max(600px) {
+        font-size: 16px;
+        padding: 14px 20px;
+      }
+    }
+
+    .adminbar__link--log {
+      min-width: 120px;
+      height: 60px;
+      display: block;
+      color: #ffffff;
+      background-color: #188ce5;
+    }
+  }
+
   .admin__table {
     width: 100%;
     padding: 56px 32px 20px 32px;
+    @include media-max(500px) {
+      padding: 30px 15px 20px 15px;
+    }
   }
 
   .studenttable {
     position: relative;
+    ::-webkit-scrollbar {
+      height: 2px !important;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #188ce562;
+    }
     .studenttable__top {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       margin-bottom: 56px;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      @include media-max(1440px) {
+        margin-bottom: 24px;
+        justify-content: flex-start;
+        overflow-x: scroll;
+      }
     }
 
     .studenttable__select {
@@ -135,17 +221,30 @@
 
     .studenttable__select--first {
       width: 100%;
-      max-width: 150px;
+      min-width: 120px;
+      min-height: 44;
       padding: 12px 15px;
       margin-right: 25px;
     }
 
     .studenttable__select--second {
-      width: 150px;
+      min-width: 130px;
+      min-height: 44px;
+      max-width: 150px;
       padding: 12px 0px;
       border: none;
       color: $white;
       background-color: $blue;
+      @include media-max(400px) {
+        height: 40px;
+        width: 180px;
+      }
+    }
+
+    .studenttable__select--class {
+      margin-left: 25px;
+      max-width: 180px;
+      min-width: 150px;
     }
 
     .studenttable__label {
@@ -166,6 +265,7 @@
     .studenttable__search {
       width: 100%;
       max-width: 400px;
+      min-width: 200px;
       padding: 12px 50px;
       border: none;
       border-radius: 12px;
@@ -187,6 +287,10 @@
       cursor: pointer;
     }
     .studenttable__main {
+      background-color: $white;
+      ::-webkit-scrollbar {
+        display: none;
+      }
       .table__top {
         padding: 23px 21px 14px 21px;
         background-color: $white;
@@ -204,41 +308,57 @@
           &:nth-child(1) {
             margin-right: 40px;
           }
-          &:nth-child(2) {
-            margin-right: 200px;
-          }
           &:nth-child(3) {
-            margin-right: 180px;
+            min-width: 240px;
+            margin-right: 0px;
           }
           &:nth-child(4) {
-            width: 260px;
+            min-width: 160px;
             margin-right: 0px;
           }
           &:nth-child(5) {
             margin-right: 100px;
           }
+          &:last-child {
+            margin-right: 10px;
+          }
         }
 
         .top__text--student {
-          margin-right: 190px !important;
+          min-width: 255px !important;
         }
 
         .top__text--teacher {
           margin-right: 0;
-          width: 200px;
+          min-width: 200px;
         }
 
         .top__text--full {
-          width: 250px !important;
+          min-width: 250px !important;
         }
 
         .top__text--admin {
           margin-right: 0;
-          width: 150px !important;
+          min-width: 150px !important;
         }
 
         .top__text--another {
-          width: 310px !important;
+          min-width: 310px !important;
+        }
+        .top__text--width {
+          min-width: 260px !important;
+        }
+
+        .top__text--full {
+          min-width: 260px !important;
+        }
+
+        .top__text--edit {
+          min-width: 160px !important;
+        }
+
+        .top__text--sone {
+          min-width: 230px;
         }
       }
 
@@ -246,13 +366,25 @@
         justify-content: space-between;
         padding: 22px 140px;
         .top__text--classing {
+          min-width: auto !important;
           margin: 0 !important;
+        }
+        @include media-max(700px) {
+          padding: 20px 60px !important;
+        }
+        @include media-max(700px) {
+          padding: 20px 30px !important;
         }
       }
 
       .table__list {
         height: 500px;
         overflow-y: scroll;
+        overflow-x: hidden;
+
+        @include media-max(1440px) {
+          overflow-x: scroll;
+        }
       }
 
       .table__item {
@@ -261,13 +393,15 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid #dfdfdf;
+
+        // border-bottom: 1px solid #dfdfdf;
         .table__img {
-          width: 50px;
-          height: 50px;
+          width: 35px;
+          height: 35px;
           border-radius: 100px;
           box-shadow: 0px 2.758972644805908px 2.758972644805908px 0px
             rgba(0, 0, 0, 0.1);
-          margin-right: 25px;
+          margin-right: 40px;
         }
 
         .table__span {
@@ -277,36 +411,49 @@
           font-style: normal;
           font-weight: 400;
           line-height: 22px;
+          position: relative;
+          &::after {
+            content: "";
+            bottom: -16px;
+            position: absolute;
+            width: 100%;
+            height: 0.5px;
+            background-color: #dfdfdf;
+          }
         }
 
         .table__span--first {
-          width: 238px;
+          min-width: 238px;
         }
         .table__span--another {
-          width: 350px;
+          min-width: 350px;
         }
         .table__span--two {
-          width: 260px;
+          min-width: 260px;
         }
         .table__span--name {
-          width: 263px;
+          min-width: 263px;
         }
         .table__span--three {
-          width: 230px;
+          min-width: 230px;
           overflow-x: hidden;
           margin-right: 30px;
         }
 
         .table__span--margin {
-          width: 250px;
+          min-width: 250px;
         }
 
         .table__span--nam {
-          width: 267px;
+          min-width: 267px;
         }
 
         .table__span--admin {
-          width: 150px;
+          min-width: 150px;
+        }
+
+        .table__span--stwo {
+          min-width: 150px;
         }
 
         .table__btn {
@@ -314,6 +461,16 @@
           padding: none;
           background-color: transparent;
           cursor: pointer;
+          position: relative;
+          &::after {
+            content: "";
+            bottom: -9px;
+            position: absolute;
+            width: 100%;
+            height: 0.2px;
+            background-color: #dfdfdf;
+          }
+
           svg {
             width: 20px;
             height: 30px;
@@ -350,8 +507,14 @@
 
 .table__item--newitem {
   width: 100%;
-  padding: 10px 140px !important;
+  padding: 9px 140px !important;
   justify-content: space-between !important;
+  @include media-max(700px) {
+    padding: 9px 60px !important;
+  }
+  @include media-max(700px) {
+    padding: 9px 30px !important;
+  }
 }
 
 .classmodal {
@@ -361,6 +524,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+
+  @include media-max(500px) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  @include media-max(400px) {
+    max-width: 300px;
+  }
+
   label {
     display: block;
     text-align: center;
@@ -381,6 +554,13 @@
     background: #eeebeb;
     margin: 0 auto;
     margin-bottom: 30px;
+
+    @include media-max(500px) {
+      max-width: 300px;
+    }
+    @include media-max(400px) {
+      max-width: 250px;
+    }
   }
 
   span {
@@ -407,5 +587,21 @@
     border: none;
     border-radius: 10px;
     background-color: $blue;
+  }
+
+  .exit_btn {
+    width: 25px;
+    height: 25px;
+    top: 6px;
+    right: 6px;
+    position: absolute;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    svg {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
