@@ -65,7 +65,7 @@ export const Table = () => {
             <option value={""}>{t("table.student")}</option>
             {room?.classes?.map((item) => (
               <option key={item.id} value={item.id}>
-                {item.name} sinfi
+                {item.name} {t("table.class")}
               </option>
             ))}
           </select>

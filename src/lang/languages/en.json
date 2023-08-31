@@ -56,7 +56,8 @@
     "active": "Aktive",
     "oral": "Oral",
     "audit": "Auditorium",
-    "grup": "Collective"
+    "grup": "Collective",
+    "class": "class"
   },
   "reyting": {
     "choose": "Choose class",
