@@ -395,7 +395,7 @@ const Jurnal = () => {
             setAddModal(true);
           }}
         >
-          {t("table.rentt")}
+          {t("table.rent")}
         </button>
       </div>
     </div>
