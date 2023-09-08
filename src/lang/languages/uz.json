@@ -24,7 +24,7 @@
   "score": {
     "main": {
       "grades": "Baholar",
-      "date": "Guruhni tanlang",
+      "date": "Sanani tanlang",
       "bussines": "Biznesni davolash"
     },
     "sciences": {
@@ -40,6 +40,34 @@
       "body": "Nutqda tana harakatlaridan erkin foydalanadi",
       "speach": "O'z nutqiga tinglovchilarni jalb qiladi",
       "group": "Guruh muloqotida faol ishtirok etadi"
+    },
+    "crit": {
+      "logic": "Mantiqiy fikrini dalillar bilan isbotlay oladi",
+      "analyz": "Vaziyatni analiz qilib, yechim beradi",
+      "parts": "Muammolarni kichik qismlarga to'g'ri ajratadi",
+      "think": "Kreativ o'ylaydi",
+      "clearly": "Aniq fikrlaydi"
+    },
+    "resolv": {
+      "depth": "Vaziyatni chuqur tahlil qila oladi",
+      "quickly": "Yechimlarni tez beradi",
+      "decision": "To'g'ri qaror qabul qiladi",
+      "solution": "Tahlilga asoslanib asosli yechim beradi",
+      "identifies": "Muammoni samarali aniqlaydi"
+    },
+    "impruv": {
+      "solutions": "Muammoning har bir qismiga asosli yechimlar bera oladi",
+      "quick": "Tezkor yechim beradi",
+      "correctly": "Yechim manbalaridan to'g'ri foydalana oladi",
+      "tailor": "Har qanday muammoga yechimni moslay oladi",
+      "applies": "Yechimlarni samarali qo'llaydi"
+    },
+    "stresing": {
+      "resistant": "Vaziyatga chidamli",
+      "tasks": "Stressga tushish oldini olish sifatida vazifalarda vaqtni to'g'ri taqsimlaydi",
+      "against": "O'ziga nisbatan tanqidlarni to'g'ri qabul qiladi",
+      "times": "Stress vaqtida  ijobiy yondashuvni saqlab qoladi",
+      "properly": "Stress vaqtida hissoyotlarini to'g'ri boshqara oladi"
     },
     "schedual": {
       "time": "Dars vaqtini rejalashtirish",
@@ -65,5 +93,33 @@
     "gold": "Oltin",
     "silver": "Kumush",
     "bronze": "Bronza"
+  },
+  "crit": {
+    "evidence": "Dalil",
+    "analysis": "Tahlil",
+    "parts": "Qismlar",
+    "creative": "Ijodiy",
+    "clearly": "Aniq"
+  },
+  "prob": {
+    "analysis": "Tahlil",
+    "fast": "Tez",
+    "decision": "Qaror",
+    "solution": "Yechim",
+    "efficient": "Samarali"
+  },
+  "solush": {
+    "justified": "Oqlangan",
+    "quick": "Tez",
+    "right": "To'g'ri",
+    "adapt": "Moslash",
+    "efficient": "Samarali"
+  },
+  "stres": {
+    "resistant": "Chidamli",
+    "time": "Vaqt",
+    "criticism": "Tanqid",
+    "positive": "Ijobiy",
+    "feeling": "Hissiyot"
   }
 }

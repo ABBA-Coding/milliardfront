@@ -29,7 +29,7 @@ export const ReytingItem = ({ name, point, clas }) => {
           })
         )}
         {/* {`${Math.floor(count)} `}% */}
-        {`${Math.floor((count = (count / 500) * 100))}`} %
+        {`${Math.floor((count = (count / 400) * 100))}`} %
         <span className="visually-hidden">{(count = 0)}</span>
       </li>
     </>

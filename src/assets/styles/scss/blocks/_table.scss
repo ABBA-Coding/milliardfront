@@ -113,11 +113,6 @@
         background: $white;
         margin-bottom: 14px;
         transition: all ease 0.3s;
-        &:hover {
-          background-color: $yellow;
-          border: 1px solid $yellow;
-          transition: all ease 0.3s;
-        }
       }
 
       .date__btn-margin {
@@ -252,12 +247,6 @@
       }
       @include media-max(400px) {
         margin-right: 0px;
-      }
-
-      &:hover {
-        background-color: $yellow;
-        border: 1px solid $yellow;
-        transition: all ease 0.3s;
       }
     }
   }

@@ -63,7 +63,7 @@ export const LastCard = () => {
             : ""
         )}
         <span className="info__count">
-          {`${Math.floor((sum = (sum / 125) * 100))} `}%
+          {`${Math.floor((sum = (sum / 100) * 100))} `}%
         </span>
       </div>
       <div className="info__down down">
@@ -85,7 +85,7 @@ export const LastCard = () => {
                     {item?.scores.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 25) * 100)}%`}
+                    {`${(sum = (sum / 20) * 100)}%`}
                   </span>
                 </Link>
               </li>
@@ -109,7 +109,7 @@ export const LastCard = () => {
                     {item?.scores?.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 25) * 100)}%`}
+                    {`${(sum = (sum / 20) * 100)}%`}
                     {/* {setTwo(sum)} */}
                   </span>
                 </Link>
@@ -134,7 +134,7 @@ export const LastCard = () => {
                     {item?.scores?.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 25) * 100)}%`}
+                    {`${(sum = (sum / 20) * 100)}%`}
                   </span>
                 </Link>
               </li>
@@ -157,7 +157,7 @@ export const LastCard = () => {
                     {item?.scores?.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 25) * 100)}%`}
+                    {`${(sum = (sum / 20) * 100)}%`}
                   </span>
                 </Link>
               </li>
@@ -180,7 +180,7 @@ export const LastCard = () => {
                     {item?.scores?.forEach((number) => {
                       sum += number;
                     })}
-                    {`${(sum = (sum / 25) * 100)}%`}
+                    {`${(sum = (sum / 20) * 100)}%`}
                   </span>
                 </Link>
               </li>

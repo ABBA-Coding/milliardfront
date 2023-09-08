@@ -41,6 +41,34 @@
       "speach": "Involves the audience in his speech",
       "group": "Actively participates in group communication"
     },
+    "crit": {
+      "logic": "He can prove his logical opinion with evidence",
+      "analyz": "Analyzes the situation and gives a solution",
+      "parts": "Breaks down problems into small parts",
+      "think": "Thinks creatively",
+      "clearly": "Thinks clearly"
+    },
+    "resolv": {
+      "depth": "He can analyze the situation in depth",
+      "quickly": "Gives solutions quickly",
+      "decision": "Makes the right decision",
+      "solution": "Gives a reasonable solution based on analysis",
+      "identifies": "Effectively identifies the problem"
+    },
+    "impruv": {
+      "solutions": "Able to provide reasonable solutions to every part of the problem",
+      "quick": "Gives a quick solution",
+      "correctly": "Can use solution resources correctly",
+      "tailor": "He can tailor a solution to any problem ",
+      "applies": "Effectively applies solutions"
+    },
+    "stresing": {
+      "resistant": "Resistant to the situation",
+      "tasks": "As a prevention of stress, it distributes time correctly in tasks",
+      "against": "Accepts criticism against him correctly",
+      "times": "Maintains a positive attitude in times of stress",
+      "properly": "He can manage his emotions properly in times of stress"
+    },
     "schedual": {
       "time": "Schedule Time Table",
       "pick": "Pick a Time",
@@ -65,5 +93,33 @@
     "gold": "Gold",
     "silver": "Silver",
     "bronze": "Bronze"
+  },
+  "crit": {
+    "evidence": "Evidence",
+    "analysis": "Analysis",
+    "parts": "Parts",
+    "creative": "Creative",
+    "clearly": "Clearly"
+  },
+  "prob": {
+    "analysis": "Analysis",
+    "fast": "Fast",
+    "decision": "Decision",
+    "solution": "Solution",
+    "efficient": "Efficient"
+  },
+  "solush": {
+    "justified": "Justified",
+    "quick": "Quick",
+    "right": "Right",
+    "adapt": "Adapt",
+    "efficient": "Efficient"
+  },
+  "stres": {
+    "resistant": "Resistant",
+    "time": "Time",
+    "criticism": "Criticism",
+    "positive": "Positive",
+    "feeling": "Feeling"
   }
 }

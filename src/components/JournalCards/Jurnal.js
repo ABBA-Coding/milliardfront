@@ -97,11 +97,11 @@ const Jurnal = () => {
           <table>
             <thead>
               <tr>
-                <th>{t("table.think")}</th>
-                <th>{t("table.active")}</th>
-                <th>{t("table.oral")}</th>
-                <th>{t("table.audit")}</th>
-                <th>{t("table.grup")}</th>
+                <th>{t("crit.evidence")}</th>
+                <th>{t("crit.analysis")}</th>
+                <th>{t("crit.parts")}</th>
+                <th>{t("crit.creative")}</th>
+                <th>{t("crit.clearly")}</th>
               </tr>
             </thead>
             <tbody>
@@ -121,11 +121,11 @@ const Jurnal = () => {
           <table>
             <thead>
               <tr>
-                <th>{t("table.think")}</th>
-                <th>{t("table.active")}</th>
-                <th>{t("table.oral")}</th>
-                <th>{t("table.audit")}</th>
-                <th>{t("table.grup")}</th>
+                <th>{t("prob.analysis")}</th>
+                <th>{t("prob.fast")}</th>
+                <th>{t("prob.decision")}</th>
+                <th>{t("prob.solution")}</th>
+                <th>{t("prob.efficient")}</th>
               </tr>
             </thead>
             <tbody>
@@ -145,11 +145,11 @@ const Jurnal = () => {
           <table>
             <thead>
               <tr>
-                <th>{t("table.think")}</th>
-                <th>{t("table.active")}</th>
-                <th>{t("table.oral")}</th>
-                <th>{t("table.audit")}</th>
-                <th>{t("table.grup")}</th>
+                <th>{t("solush.justified")}</th>
+                <th>{t("solush.quick")}</th>
+                <th>{t("solush.right")}</th>
+                <th>{t("solush.adapt")}</th>
+                <th>{t("solush.efficient")}</th>
               </tr>
             </thead>
             <tbody>
@@ -169,11 +169,11 @@ const Jurnal = () => {
           <table>
             <thead>
               <tr>
-                <th>{t("table.think")}</th>
-                <th>{t("table.active")}</th>
-                <th>{t("table.oral")}</th>
-                <th>{t("table.audit")}</th>
-                <th>{t("table.grup")}</th>
+                <th>{t("stres.resistant")}</th>
+                <th>{t("stres.time")}</th>
+                <th>{t("stres.criticism")}</th>
+                <th>{t("stres.positive")}</th>
+                <th>{t("stres.feeling")}</th>
               </tr>
             </thead>
             <tbody>
@@ -221,7 +221,7 @@ const Jurnal = () => {
                   : ""
               )}
               <span className="second__cound">
-                {`${Math.floor((sum = (sum / 25) * 100))} `}%
+                {`${Math.floor((sum = (sum / 20) * 100))} `}%
               </span>
             </div>
             <ul className="second__point point">
@@ -254,15 +254,15 @@ const Jurnal = () => {
                   : ""
               )}
               <span className="second__cound">
-                {`${Math.floor((sum = (sum / 25) * 100))} `}%
+                {`${Math.floor((sum = (sum / 20) * 100))} `}%
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">{t("table.think")}</li>
-              <li className="point__item">{t("table.active")}</li>
-              <li className="point__item">{t("table.oral")}</li>
-              <li className="point__item">{t("table.audit")}</li>
-              <li className="point__item">{t("table.grup")}</li>
+              <li className="point__item">{t("crit.evidence")}</li>
+              <li className="point__item">{t("crit.analysis")}</li>
+              <li className="point__item">{t("crit.parts")}</li>
+              <li className="point__item">{t("crit.creative")}</li>
+              <li className="point__item">{t("crit.clearly")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>
@@ -288,15 +288,15 @@ const Jurnal = () => {
                   : ""
               )}
               <span className="second__cound">
-                {`${Math.floor((sum = (sum / 25) * 100))} `}%
+                {`${Math.floor((sum = (sum / 20) * 100))} `}%
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">{t("table.think")}</li>
-              <li className="point__item">{t("table.active")}</li>
-              <li className="point__item">{t("table.oral")}</li>
-              <li className="point__item">{t("table.audit")}</li>
-              <li className="point__item">{t("table.grup")}</li>
+              <li className="point__item">{t("prob.analysis")}</li>
+              <li className="point__item">{t("prob.fast")}</li>
+              <li className="point__item">{t("prob.decision")}</li>
+              <li className="point__item">{t("prob.solution")}</li>
+              <li className="point__item">{t("prob.efficient")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>
@@ -322,15 +322,15 @@ const Jurnal = () => {
                   : ""
               )}
               <span className="second__cound">
-                {`${Math.floor((sum = (sum / 25) * 100))} `}%
+                {`${Math.floor((sum = (sum / 20) * 100))} `}%
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">{t("table.think")}</li>
-              <li className="point__item">{t("table.active")}</li>
-              <li className="point__item">{t("table.oral")}</li>
-              <li className="point__item">{t("table.audit")}</li>
-              <li className="point__item">{t("table.grup")}</li>
+              <li className="point__item">{t("solush.justified")}</li>
+              <li className="point__item">{t("solush.quick")}</li>
+              <li className="point__item">{t("solush.right")}</li>
+              <li className="point__item">{t("solush.adapt")}</li>
+              <li className="point__item">{t("solush.efficient")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>
@@ -356,15 +356,15 @@ const Jurnal = () => {
                   : ""
               )}
               <span className="second__cound">
-                {`${Math.floor((sum = (sum / 25) * 100))} `}%
+                {`${Math.floor((sum = (sum / 20) * 100))} `}%
               </span>
             </div>
             <ul className="second__point point">
-              <li className="point__item">{t("table.think")}</li>
-              <li className="point__item">{t("table.active")}</li>
-              <li className="point__item">{t("table.oral")}</li>
-              <li className="point__item">{t("table.audit")}</li>
-              <li className="point__item">{t("table.grup")}</li>
+              <li className="point__item">{t("stres.resistant")}</li>
+              <li className="point__item">{t("stres.time")}</li>
+              <li className="point__item">{t("stres.criticism")}</li>
+              <li className="point__item">{t("stres.positive")}</li>
+              <li className="point__item">{t("stres.feeling")}</li>
             </ul>
             <ul className="second__number number">
               {student?.user?.scores?.map((item) =>

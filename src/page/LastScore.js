@@ -22,16 +22,47 @@ export const LastScore = () => {
   const lastElement = time ? time : dates[dates?.length - 1];
 
   let title = "";
+  let firstTitle = t("score.section.freely");
+  let twoTitle = t("score.section.activ");
+  let thrithTitle = t("score.section.body");
+  let fourTitle = t("score.section.speach");
+  let fiveTitle = t("score.section.group");
+
   if (param === "COMMUNICATION") {
     title = t("score.sciences.communic");
+    firstTitle = t("score.section.freely");
+    twoTitle = t("score.section.activ");
+    thrithTitle = t("score.section.body");
+    fourTitle = t("score.section.speach");
+    fiveTitle = t("score.section.group");
   } else if (param === "CRITICAL_THINKING") {
     title = t("score.sciences.critic");
+    firstTitle = t("score.crit.logic");
+    twoTitle = t("score.crit.analyz");
+    thrithTitle = t("score.crit.parts");
+    fourTitle = t("score.crit.think");
+    fiveTitle = t("score.crit.clearly");
   } else if (param === "PROBLEM_SOLVING") {
     title = t("score.sciences.problem");
+    firstTitle = t("score.resolv.depth");
+    twoTitle = t("score.resolv.quickly");
+    thrithTitle = t("score.resolv.decision");
+    fourTitle = t("score.resolv.solution");
+    fiveTitle = t("score.resolv.identifies");
   } else if (param === "IMPLEMENTATION") {
     title = t("score.sciences.solution");
+    firstTitle = t("score.impruv.solutions");
+    twoTitle = t("score.impruv.quick");
+    thrithTitle = t("score.impruv.correctly");
+    fourTitle = t("score.impruv.tailor");
+    fiveTitle = t("score.impruv.applies");
   } else if (param === "STRESS_REACTIVITY") {
     title = t("score.sciences.stress");
+    firstTitle = t("score.stresing.resistant");
+    twoTitle = t("score.stresing.tasks");
+    thrithTitle = t("score.stresing.against");
+    fourTitle = t("score.stresing.times");
+    fiveTitle = t("score.stresing.properly");
   }
 
   useEffect(() => {
@@ -54,15 +85,15 @@ export const LastScore = () => {
           <div className="info__top">
             <h3 className="info__title">{title}</h3>
             <span className="info__coun">
-              {`${Math.floor((sum = (sum / 25) * 100))} `}%
+              {`${Math.floor((sum = (sum / 20) * 100))} `}%
             </span>
           </div>
           <ul className="info__list list">
-            <li className="list__item ">{t("score.section.freely")}</li>
-            <li className="list__item ">{t("score.section.activ")}</li>
-            <li className="list__item ">{t("score.section.body")}</li>
-            <li className="list__item ">{t("score.section.speach")}</li>
-            <li className="list__item ">{t("score.section.group")}</li>
+            <li className="list__item ">{firstTitle}</li>
+            <li className="list__item ">{twoTitle}</li>
+            <li className="list__item ">{thrithTitle}</li>
+            <li className="list__item ">{fourTitle}</li>
+            <li className="list__item ">{fiveTitle}</li>
           </ul>
           <div className="info__count count">
             {students?.user?.scores?.map((e) =>

@@ -199,11 +199,11 @@ export const RentModal = ({ isOpen, id }) => {
           <table className="log__table">
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("table.think")}</th>
+                <th>{t("table.active")}</th>
+                <th>{t("table.oral")}</th>
+                <th>{t("table.audit")}</th>
+                <th>{t("table.grup")}</th>
               </tr>
             </thead>
             <tbody>
@@ -280,11 +280,11 @@ export const RentModal = ({ isOpen, id }) => {
           <table className="log__table">
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("crit.evidence")}</th>
+                <th>{t("crit.analysis")}</th>
+                <th>{t("crit.parts")}</th>
+                <th>{t("crit.creative")}</th>
+                <th>{t("crit.clearly")}</th>
               </tr>
             </thead>
             <tbody>
@@ -366,11 +366,11 @@ export const RentModal = ({ isOpen, id }) => {
           <table className="log__table">
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("prob.analysis")}</th>
+                <th>{t("prob.fast")}</th>
+                <th>{t("prob.decision")}</th>
+                <th>{t("prob.solution")}</th>
+                <th>{t("prob.efficient")}</th>
               </tr>
             </thead>
             <tbody>
@@ -452,11 +452,11 @@ export const RentModal = ({ isOpen, id }) => {
           <table className="log__table">
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("solush.justified")}</th>
+                <th>{t("solush.quick")}</th>
+                <th>{t("solush.right")}</th>
+                <th>{t("solush.adapt")}</th>
+                <th>{t("solush.efficient")}</th>
               </tr>
             </thead>
             <tbody>
@@ -538,11 +538,11 @@ export const RentModal = ({ isOpen, id }) => {
           <table className="log__table">
             <thead>
               <tr>
-                <th>Fikrlarini</th>
-                <th>Aktiv</th>
-                <th>Og'zaki</th>
-                <th>Auditoriyani</th>
-                <th>Jamoaviy</th>
+                <th>{t("stres.resistant")}</th>
+                <th>{t("stres.time")}</th>
+                <th>{t("stres.criticism")}</th>
+                <th>{t("stres.positive")}</th>
+                <th>{t("stres.feeling")}</th>
               </tr>
             </thead>
             <tbody>

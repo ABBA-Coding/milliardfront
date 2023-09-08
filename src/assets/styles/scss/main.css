@@ -3174,7 +3174,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .score .social .social__inner .inner__left .info__left {
   display: flex;
@@ -3653,11 +3653,6 @@ ul {
   margin-bottom: 14px;
   transition: all ease 0.3s;
 }
-.table .leftcard .card__date .date__btn:hover {
-  background-color: #ffe600;
-  border: 1px solid #ffe600;
-  transition: all ease 0.3s;
-}
 .table .leftcard .card__date .date__btn-margin {
   margin-bottom: 49px;
 }
@@ -3800,11 +3795,6 @@ ul {
   .table .databtn .databtn__item {
     margin-right: 0px;
   }
-}
-.table .databtn .databtn__item:hover {
-  background-color: #ffe600;
-  border: 1px solid #ffe600;
-  transition: all ease 0.3s;
 }
 .table .event {
   padding-left: 83px;
