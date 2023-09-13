@@ -136,9 +136,11 @@ export const ClassTable = () => {
           </div>
           {room?.classes?.map((item) => (
             <div key={item?.id} className="table__item table__item--newitem">
-              <span className="table__span">{item.name}</span>
+              <span className="table__span table__span--clone">
+                {item.name}
+              </span>
 
-              <span className="table__span">
+              <span className="table__span table__span--cltwo">
                 <span>{item?.students?.length || 0}</span>
               </span>
 

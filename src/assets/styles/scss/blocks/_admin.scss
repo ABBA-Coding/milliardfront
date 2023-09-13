@@ -456,6 +456,17 @@
           min-width: 150px;
         }
 
+        .table__span--clone {
+          width: 100%;
+          max-width: 510px !important;
+        }
+
+        .table__span--cltwo {
+          width: 100%;
+          max-width: 505px !important;
+          margin-left: 30px;
+        }
+
         .table__btn {
           border: none;
           padding: none;
@@ -508,7 +519,7 @@
 .table__item--newitem {
   width: 100%;
   padding: 9px 140px !important;
-  justify-content: space-between !important;
+  // justify-content: space-between !important;
   @include media-max(700px) {
     padding: 9px 60px !important;
   }
