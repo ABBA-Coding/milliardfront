@@ -15,7 +15,7 @@ Modal.setAppElement("#root");
 export const StudentTable = () => {
   const navigate = useNavigate();
   const [room, setRoom] = useState();
-  const [classId, setClassId] = useState("");
+  const [classId, setClassId] = useState("all");
   const [Students, setStudents] = useState([]);
   const [btn, setBtn] = useState("Class");
   const [editId, setEditId] = useState("");
@@ -50,20 +50,11 @@ export const StudentTable = () => {
     GetElementServices("class/all", setRoom);
   }, []);
 
-  // get students by class
-  useEffect(() => {
-    GetElementServices(`students/class?id=${classId}`, setStudents);
-  }, [classId]);
-
   // All Student
   const GetHandleStudent = () => {
     GetElementServices(`students`, setStudents);
     setBtn("Class");
   };
-
-  useEffect(() => {
-    GetElementServices(`students`, setStudents);
-  }, []);
 
   // seach
   const HandleChearch = (evt) => {
@@ -73,17 +64,25 @@ export const StudentTable = () => {
 
   // Table
 
+  useEffect(() => {
+    if (classId === "all") {
+      GetElementServices(`students`, setStudents);
+      setBtn("Class");
+    } else {
+      GetElementServices(`students/class?id=${classId}`, setStudents);
+    }
+  }, [classId]);
+
   return (
     <div className="studenttable">
       <div className="studenttable__top">
-        {btn === "Class" && (
-          <button
-            className="studenttable__select studenttable__select--second"
-            onClick={() => setAddModal(true)}
-          >
-            Add student
-          </button>
-        )}
+        <button
+          className="studenttable__select studenttable__select--second"
+          onClick={() => setAddModal(true)}
+        >
+          Add student
+        </button>
+
         <button
           className="studenttable__select studenttable__select--first"
           onClick={GetHandleStudent}
@@ -107,9 +106,9 @@ export const StudentTable = () => {
             setClassId(e.target.value);
             setBtn("Password");
           }}
-          defaultValue={""}
+          defaultValue={"all"}
         >
-          <option value={""}>All Classes</option>
+          <option value={"all"}>All Classes</option>
           {room?.classes?.map((item) => (
             <option value={item.id}>{item.name} sinfi</option>
           ))}
@@ -202,22 +201,22 @@ export const StudentTable = () => {
         <div className="table__list">
           <div className="table__top top">
             <span className="top__text">Image</span>
-            <span className="top__text top__text--sone">E-mail</span>
-            <span className="top__text top__text--student">Full name</span>
-            <span className="top__text">{btn}</span>
-            <span className="top__text">Edit</span>
-            <span className="top__text">Delete</span>
+            <span className="top__text top__text--stone">E-mail</span>
+            <span className="top__text top__text--sttwo">Full name</span>
+            <span className="top__text top__text--stthree">{btn}</span>
+            <span className="top__text top__text--stfour">Edit</span>
+            <span className="top__text top__text--stfive">Delete</span>
           </div>
           {StudentVal?.map((item) => (
             <div className="table__item">
               <img className="table__img" src={Man} alt="student" />
-              <span className="table__span table__span--first">
+              <span className="table__span table__span--stone">
                 {item.email}
               </span>
-              <span className="table__span table__span--two">
+              <span className="table__span table__span--sttwo">
                 {item.fullname}
               </span>
-              <span className="table__span table__span--stwo">
+              <span className="table__span table__span--stthree">
                 {item.class?.name || item.password
                   ? item.class?.name || item.password
                   : item.class?.name}

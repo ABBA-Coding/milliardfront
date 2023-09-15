@@ -357,8 +357,28 @@
           min-width: 160px !important;
         }
 
-        .top__text--sone {
-          min-width: 230px;
+        .top__text--stone {
+          min-width: 275px;
+        }
+
+        .top__text--sttwo {
+          min-width: 280px !important;
+        }
+
+        .top__text--stthree {
+          min-width: 310px !important;
+        }
+
+        .top__text--tezero {
+          min-width: 230px !important;
+        }
+
+        .top__text--teone {
+          min-width: 260px !important;
+        }
+
+        .top__text--tetwo {
+          min-width: 220px !important;
         }
       }
 
@@ -445,11 +465,17 @@
         }
 
         .table__span--nam {
-          min-width: 267px;
+          min-width: 235px !important;
         }
 
         .table__span--admin {
           min-width: 150px;
+          &::after {
+            display: none;
+            @include media-max(1024px) {
+              display: block;
+            }
+          }
         }
 
         .table__span--stwo {
@@ -465,6 +491,37 @@
           width: 100%;
           max-width: 505px !important;
           margin-left: 30px;
+        }
+
+        .table__span--stone {
+          min-width: 280px;
+        }
+
+        .table__span--sttwo {
+          min-width: 240px;
+        }
+
+        .table__span--teone {
+          min-width: 230px;
+          &::after {
+            display: none;
+            @include media-max(1024px) {
+              display: block;
+            }
+          }
+        }
+
+        .table__span--stthree {
+          min-width: 320px;
+          max-width: 320px;
+          overflow-x: scroll;
+          margin-right: 30px;
+          &::after {
+            display: none;
+            @include media-max(1024px) {
+              display: block;
+            }
+          }
         }
 
         .table__btn {

@@ -171,11 +171,11 @@ export const TeacherTable = () => {
         <div className="table__list">
           <div className="table__top top">
             <span className="top__text top__text--teacher">E-mail</span>
-            <span className="top__text top__text--full">Full name</span>
-            <span className="top__text">Username</span>
-            <span className="top__text">Class</span>
-            <span className="top__text">Edit</span>
-            <span className="top__text">Delete</span>
+            <span className="top__text top__text--tezero">Full name</span>
+            <span className="top__text top__text--teone">Username</span>
+            <span className="top__text top__text--tetwo">Class</span>
+            <span className="top__text top__text--tethree">Edit</span>
+            <span className="top__text top__text--tefour">Delete</span>
           </div>
           {StudentVal?.map((item) => (
             <div className="table__item" key={item.id}>
@@ -188,7 +188,7 @@ export const TeacherTable = () => {
               <span className="table__span table__span--margin">
                 {item.username}
               </span>
-              <span className="table__span table__span--admin">
+              <span className="table__span table__span--teone">
                 {item?.class?.name}
               </span>
               <button

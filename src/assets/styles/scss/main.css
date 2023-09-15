@@ -2457,8 +2457,23 @@ ul {
 .admin .studenttable .studenttable__main .table__top .top__text--edit {
   min-width: 160px !important;
 }
-.admin .studenttable .studenttable__main .table__top .top__text--sone {
-  min-width: 230px;
+.admin .studenttable .studenttable__main .table__top .top__text--stone {
+  min-width: 275px;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--sttwo {
+  min-width: 280px !important;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--stthree {
+  min-width: 310px !important;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--tezero {
+  min-width: 230px !important;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--teone {
+  min-width: 260px !important;
+}
+.admin .studenttable .studenttable__main .table__top .top__text--tetwo {
+  min-width: 220px !important;
 }
 .admin .studenttable .studenttable__main .classing {
   justify-content: space-between;
@@ -2540,10 +2555,18 @@ ul {
   min-width: 250px;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--nam {
-  min-width: 267px;
+  min-width: 235px !important;
 }
 .admin .studenttable .studenttable__main .table__item .table__span--admin {
   min-width: 150px;
+}
+.admin .studenttable .studenttable__main .table__item .table__span--admin::after {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .admin .studenttable .studenttable__main .table__item .table__span--admin::after {
+    display: block;
+  }
 }
 .admin .studenttable .studenttable__main .table__item .table__span--stwo {
   min-width: 150px;
@@ -2556,6 +2579,37 @@ ul {
   width: 100%;
   max-width: 505px !important;
   margin-left: 30px;
+}
+.admin .studenttable .studenttable__main .table__item .table__span--stone {
+  min-width: 280px;
+}
+.admin .studenttable .studenttable__main .table__item .table__span--sttwo {
+  min-width: 240px;
+}
+.admin .studenttable .studenttable__main .table__item .table__span--teone {
+  min-width: 230px;
+}
+.admin .studenttable .studenttable__main .table__item .table__span--teone::after {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .admin .studenttable .studenttable__main .table__item .table__span--teone::after {
+    display: block;
+  }
+}
+.admin .studenttable .studenttable__main .table__item .table__span--stthree {
+  min-width: 320px;
+  max-width: 320px;
+  overflow-x: scroll;
+  margin-right: 30px;
+}
+.admin .studenttable .studenttable__main .table__item .table__span--stthree::after {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .admin .studenttable .studenttable__main .table__item .table__span--stthree::after {
+    display: block;
+  }
 }
 .admin .studenttable .studenttable__main .table__item .table__btn {
   border: none;
